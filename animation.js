@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('.slide-up');
+    const imageElements = document.querySelectorAll('.slide-up-image');
+    const textElements = document.querySelectorAll('.slide-up');
 
     const isInView = (el) => {
         const rect = el.getBoundingClientRect();
@@ -13,7 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const checkAnimation = () => {
-        elements.forEach((el) => {
+        imageElements.forEach((el) => {
+            if (isInView(el)) {
+                el.classList.add('in-view');
+            }
+        });
+
+        textElements.forEach((el) => {
             if (isInView(el)) {
                 el.classList.add('in-view');
             }
