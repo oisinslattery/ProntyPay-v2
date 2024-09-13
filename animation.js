@@ -30,3 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', checkAnimation);
     checkAnimation(); // Initial check on page load
 });
+
