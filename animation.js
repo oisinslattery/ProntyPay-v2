@@ -31,3 +31,5 @@ document.addEventListener('DOMContentLoaded', function () {
     checkAnimation(); // Initial check on page load
 });
 
+
+
