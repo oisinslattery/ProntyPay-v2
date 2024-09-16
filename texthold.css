@@ -841,3 +841,131 @@
     <div id="NavigationAdditionalContent_desktop" class="NavigationAdditionalContent_navigationAdditionalContent__dSlV_"></div>
 </div>
 -->
+
+<nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100">
+                    <!-- Menu 1 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accounts</a>
+                        <div class="full-width-dropdown">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Accounts/a>
+                                <a class="dropdown-item" href="#">Another action 1</a>
+                                <a class="dropdown-item" href="#">Something else 1</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Action 2</a>
+                                <a class="dropdown-item" href="#">Another action 2</a>
+                                <a class="dropdown-item" href="#">Something else 2</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Action 3</a>
+                                <a class="dropdown-item" href="#">Another action 3</a>
+                                <a class="dropdown-item" href="#">Something else 3</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Menu 2 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu 2</a>
+                        <div class="full-width-dropdown">
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Action 4</a>
+                                <a class="dropdown-item" href="#">Another action 4</a>
+                                <a class="dropdown-item" href="#">Something else 4</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Action 5</a>
+                                <a class="dropdown-item" href="#">Another action 5</a>
+                                <a class="dropdown-item" href="#">Something else 5</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a class="dropdown-item" href="#">Action 6</a>
+                                <a class="dropdown-item" href="#">Another action 6</a>
+                                <a class="dropdown-item" href="#">Something else 6</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        /* Navbar style */
+.navbar {
+    background-color: #343a40;
+    z-index: 1000;
+    position: fixed; /* Fixed position to stay on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    height: auto; /* Ensure the navbar height is auto by default */
+    overflow: hidden; /* Hide overflowing content */
+    transition: height 0.3s ease-in-out; /* Smooth transition for height */
+}
+
+/* Navbar hidden state */
+.navbar.hidden {
+    height: 0; /* Set height to 0 when hidden */
+    padding: 0; /* Remove padding to avoid extra space */
+}
+
+.nav-item {
+    position: relative; /* Ensure the dropdown is positioned relative to the item */
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    color: white;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #495057;
+}
+
+/* Dropdown container */
+.full-width-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position dropdown directly below navbar */
+    width: 100vw;
+    background-color: #343a40;
+    border: none;
+    display: none; /* Initially hidden */
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* To handle multiple columns */
+    display: flex;
+}
+
+/* Dropdown columns */
+.full-width-dropdown .dropdown-column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Show dropdown on hover */
+.navbar-nav .nav-item:hover .full-width-dropdown {
+    display: flex; /* Flex to show dropdown with columns */
+}
+
+/* Dropdown items */
+.dropdown-item {
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+}
+
