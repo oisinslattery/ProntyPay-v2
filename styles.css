@@ -32,7 +32,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1em;
+    padding: 0;
     height: auto; /* Ensure the navbar height is auto by default */
     transition: height 0.3s ease-in-out; /* Smooth transition for height */
 }
@@ -57,6 +57,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Dropdown columns */
 .dropdown-column {
     flex: 1;
     padding: 20px;
@@ -73,11 +74,11 @@ body {
     background-color: #495057;
 }
 
-/* Show dropdown on hover */
-.nav-item:hover .full-width-dropdown {
+/* Show dropdown on hover of the nav-item or dropdown itself */
+.nav-item:hover .full-width-dropdown,
+.full-width-dropdown:hover {
     display: flex; /* Show dropdown on hover */
 }
-
 
 .blur-content {
     filter: blur(5px);
