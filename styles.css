@@ -43,6 +43,17 @@ body {
     padding: 0; /* Remove padding to avoid extra space */
 }
 
+/* Navbar brand (logo link) styling */
+.navbar-brand img {
+    height: 40px; /* Set height for the logo */
+    transition: transform 0.3s ease-in-out; /* Smoothly move with navbar */
+}
+
+/* Ensure the logo moves with the navbar */
+.navbar.hidden .navbar-brand img {
+    transform: translateY(-100%);
+}
+
 /* Dropdown styles */
 .full-width-dropdown {
     position: absolute;

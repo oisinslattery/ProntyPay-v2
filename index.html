@@ -11,7 +11,9 @@
     <body class="text-white" style="background-color: black;">
     
         <nav class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand mx-3" href="#">
+                <img src="images/ProntoPay Logo.png" style="height: 40px;">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -147,69 +149,87 @@
                 </div> 
             </div>
 
-            <div class="container-fluid snap-section text-white">
-                <div class="row">
-                    <div class="card text-white row flex-row-reverse m-0" style="background-color: black;">
+            <div class="container-fluid snap-section text-white" style="height: 100vh; display: flex; flex-direction: column;">
+                <!-- Top section (70%) for the card content -->
+                <div class="row" style="flex: 0 0 70%; display: flex; justify-content: center; align-items: center;">
+                    <!-- Card container with vertical centering -->
+                    <div class="card text-white row flex-row-reverse m-0" style="background-color: black; width: 100%;">
                         <img src="https://t4.ftcdn.net/jpg/03/79/60/99/360_F_379609986_HsnYbV7mTsiWsoDY4bfQvZC0XgrJXsGe.jpg" 
-                            class="card-img-end m-4 slide-up-image" 
-                            style="width: 60%; height: auto; right: 0;">
-                        <div class="card-img-overlay m-4 slide-up" style="width: 60%">
-                            <h2 class="display-2">Our <span class="display-2" style="color: rgb(136, 203, 236);">Story</span></h2>
-                            <p class="lead" style="font-size: 1.5rem;">ProntoPay was setup to bring greater transparency to the FX industry. The owners faced significant charges for conducting business themselves, and decided to invest into the industry to ensure others don’t have to deal with the same. As ex-BlackRock and EY-Parthenon employees, our consulting expertise ensures solutions are tailored to every client.</p>
+                             class="card-img-end m-4 slide-up-image" 
+                             style="width: 60%; height: auto; right: 0; opacity: 0.7;">
+                        <div class="card-img-overlay m-4 slide-up" style="width: 60%;">
+                            <h2 class="display-2 mb-5">Our <span class="display-2" style="color: rgb(136, 203, 236);">Story</span></h2>
+                            <p class="lead mt-5" style="font-size: 1.5rem; max-width: 50vw;">
+                                ProntoPay was setup to bring greater transparency to the FX industry. The owners faced significant charges for conducting business themselves, and decided to invest into the industry to ensure others don’t have to deal with the same. As ex-BlackRock and EY-Parthenon employees, our consulting expertise ensures solutions are tailored to every client.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="row slide-up">
-                    <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-                        <span style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">100+</span>
-                        <p class="display-6">currencies</p>
+            
+                <!-- Bottom section (30%) for the stats row -->
+                <div class="row slide-up" style="flex: 0 0 30%; display: flex; justify-content: space-around; align-items: center;">
+                    <div class="col-4 d-flex flex-column align-items-center" style="justify-content: flex-start; height: 100%; padding: 0;">
+                        <span class="stat-value" data-target="100"  data-suffix="+" style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">0</span>
+                        <p class="display-6" style="margin: 0;">currencies</p>
                     </div>
-                    <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-                        <span style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">150+</span>
-                        <p class="display-6">countries</p>
+                    <div class="col-4 d-flex flex-column align-items-center" style="justify-content: flex-start; height: 100%; padding: 0;">
+                        <span class="stat-value" data-target="150" data-suffix="+" style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">0</span>
+                        <p class="display-6" style="margin: 0;">countries</p>
                     </div>
-                    <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-                        <span style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">50+</span>
-                        <p class="display-6">named IBANs</p>
+                    <div class="col-4 d-flex flex-column align-items-center" style="justify-content: flex-start; height: 100%; padding: 0;">
+                        <span class="stat-value" data-target="50"  data-suffix="+" style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">0</span>
+                        <p class="display-6" style="margin: 0;">named IBANs</p>
                     </div>
                 </div>
             </div>
+            
+            
+            
 
-            <div class="container-fluid  snap-section text-white mt-5">
-                <div class="row">
-                    <div class="card text-white row flex-row-reverse m-0" style="background-color: black;">
+            <div class="container-fluid snap-section text-white" style="height: 100vh; display: flex; flex-direction: column;">
+                <!-- Top section (70%) for the card content -->
+                <div class="row" style="flex: 0 0 70%; display: flex; justify-content: center; align-items: center;">
+                    <!-- Card container with vertical centering -->
+                    <div class="card text-white row flex-row-reverse m-0" style="background-color: black; width: 100%; position: relative;">
                         <img src="https://www.datocms-assets.com/56018/1635356845-plane-and-sunset.jpg?auto=format&dpr=0.28&w=2121"
-                            class="card-img-end m-4 slide-up-image" 
-                            style="width: 60%; height: auto; right: 0;">
-                        <div class="card-img-overlay m-4 slide-up" style="width: 60%">
-                            <h2 class="display-2">Reducing the cost of <span class="display-2" style="color: rgb(136, 203, 236);">international transfers</span></h2>
-                            <p class="lead" style="font-size: 1.5rem;">We appreciate the fact that a payment is simply a click of a button and no one should be expected to be charged unnecessary fees. That’s why we have a price match <span>guarantee</span> to <span>beat your existing FX rate by 50%.</span></p>
+                             class="card-img-end m-4 slide-up-image"
+                             style="width: 60%; height: auto; right: 0; opacity: 0.7;">
+                        <div class="card-img-overlay m-4 slide-up" style="width: 60%; display: flex; flex-direction: column; justify-content: flex-start;">
+                            <h2 class="display-2" style="margin-bottom: 1.5rem;">
+                                Reducing the cost of <span class="display-2" style="color: rgb(136, 203, 236);">international transfers</span>
+                            </h2>
+                            <p class="lead" style="font-size: 1.5rem; max-width: 50vw;">
+                                We appreciate the fact that a payment is simply a click of a button and no one should be expected to be charged unnecessary fees. That’s why we have a price match <span>guarantee</span> to <span>beat your existing FX rate by 50%.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="row slide-up">
-                    <div class="col-4 d-flex flex-column justify-content-center align-items-center text-center">
-                        <span style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">75%</span>
-                        <p class="display-6">cheaper than banks</p>
+            
+                <!-- Bottom section (30%) for the stats row -->
+                <div class="row slide-up" style="flex: 0 0 30%; display: flex; justify-content: space-around; align-items: flex-start;">
+                    <div class="col-4 d-flex flex-column align-items-center text-center" style="justify-content: flex-start;">
+                        <span class="stat-value" data-target="75" data-suffix="%" style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">0</span>
+                        <p class="display-6" style="margin: 0;">cheaper than banks</p>
                     </div>
-                    <div class="col-4 d-flex flex-column justify-content-center align-items-center text-center">
-                        <span style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">50%</span>
-                        <p class="display-6">cheaper than competing FinTechs</p>
+                    <div class="col-4 d-flex flex-column align-items-center text-center" style="justify-content: flex-start;">
+                        <span class="stat-value" data-target="50" data-suffix="%" style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">0</span>
+                        <p class="display-6" style="margin: 0;">cheaper than competing FinTechs</p>
                     </div>
-                    <div class="col-4 d-flex flex-column justify-content-center align-items-center text-center">
-                        <span style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">0</span>
-                        <p class="display-6">transfer fees</p>
+                    <div class="col-4 d-flex flex-column align-items-center text-center" style="justify-content: flex-start;">
+                        <span class="stat-value" data-target="0" data-suffix="" style="font-size: 2.5rem; color: rgb(136, 203, 236); font-weight: 500;">1000</span>
+                        <p class="display-6" style="margin: 0;">transfer fees</p>
                     </div>
                 </div>
+                
+                
             </div>
+            
 
             <div class="container-fluid snap-section currency-info vh-100 d-flex flex-column" style="background-color: black;">
                 <!-- Top 30% Section -->
-                <div class="d-flex flex-column justify-content-center align-items-center" style="flex: 0 0 30%; text-align: center;">
-                    <h2 class="my-5 display-5">
-                        Send and receive payments in 65+ currencies with <span class="display-5" style="color: rgb(136, 203, 236);">one multi-currency account</span>
-                    </h2>
-                    <p>
+                <div style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
+                    <h1 class="display-4 text-center">Send and receive payments in 65+ currencies with  <span class="display-4" style="color: rgb(136, 203, 236);">one multi-currency account</span></h1>
+                    <p class="text-center mt-5">
                         With local collection capabilities across Europe, UK, UAE and Africa, our team at ProntoPay can assist with payments across any part of the globe.
                     </p>
                 </div>
@@ -489,7 +509,7 @@
             <div class="container-fluid  snap-section your-needs slide-up" style="margin-top: 20px; background-color: black; height: 100vh; display: flex; flex-direction: column;">
                 <div style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
                     <h1 class="display-4 text-center">Your <span class="display-4" style="color: rgb(136, 203, 236);">Needs</span></h1>
-                    <p class="text-center">We understand the importance of getting the most out of your money, managing risk, and ensuring transactions are completed with safety and security in mind.</p>
+                    <p class="text-center mt-5">We understand the importance of getting the most out of your money, managing risk, and ensuring transactions are completed with safety and security in mind.</p>
                 </div>
                 <div class="row justify-content-around w-100">
                     <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 400px; min-width: 300px;">
@@ -525,7 +545,7 @@
             <div class="container-fluid  snap-section execution-fingertips slide-up" style="margin-top: 20px; background-color: black; height: 100vh; display: flex; flex-direction: column;">
                 <div style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
                 <h1 class="display-4 text-center">Execution <span class="display-4" style="color: rgb(136, 203, 236);">At Your Fingertips</span></h1>
-                <p class="text-center">Payments should be able to be done anywhere, anytime. That’s why we provide flexibility to complete transactions using our support team or using the online portal.</p>
+                <p class="text-center mt-5">Payments should be able to be done anywhere, anytime. That’s why we provide flexibility to complete transactions using our support team or using the online portal.</p>
                 </div>
                 <div class="row justify-content-around w-100">
                     <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 400px; min-width: 300px;">
@@ -567,8 +587,37 @@
                 </div>
             </div>
 
+            <div class="container-fluid snap-section our-partners" style="margin-top: 20px; background-color: black; height: 100vh; display: flex; flex-direction: column;">
+                <div style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
+                    <h1 class="display-4 text-center">Our <span class="display-4" style="color: rgb(136, 203, 236);">Partners</span></h1>
+                    <p class="text-center mt-5">The safety of your funds is our number one priority. This is why ProntoPay is proudly partnered with FCA, DIFC and CBE regulated institutions.  </p>
+                </div>
+                <div class="row" style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 5rem;">
+                    <div class="col-sm-3 my-2 d-flex flex-column align-items-center" style="display: flex; justify-content: center; align-items: center; padding: 1em; border-right: 2px solid white;">
+                        <a href="https://ibanfirst.com/security-policy.html" target="_blank">
+                            <img src="images/partner logos/iBanFirst.png" style="max-width: 100%; height: auto; display: block;"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 my-2 d-flex flex-column align-items-center" style="display: flex; justify-content: center; align-items: center; padding: 1em; border-right: 2px solid white;">
+                        <a href="https://equalsmoney.com/blog/safeguarding#:~:text=With%20an%20Equals%20Money%20account%2C%20your%20money%20is%20kept%20in,your%20business%2C%20worry%2Dfree.&text=Equals%20Money%20PLC%20is%20authorised,488396" target="_blank">
+                            <img src="images/partner logos/Equals.png" style="max-width: 100%; height: auto; display: block;"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 my-2 d-flex flex-column align-items-center" style="display: flex; justify-content: center; align-items: center; padding: 1em; border-right: 2px solid white;">
+                        <a href="https://ebury.com/e-blog/blog/ebury_post/how-to-keep-your-money-safe-and-secure/amp/" target="_blank">
+                            <img src="images/partner logos/Ebury.png" style="max-width: 100%; height: auto; display: block;"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 my-2 d-flex flex-column align-items-center" style="display: flex; justify-content: center; align-items: center; padding: 1em;">
+                        <a href="https://www.gcpartners.co/security/" target="_blank">
+                            <img src="images/partner logos/GC.png" style="max-width: 100%; height: auto; display: block;"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="container-fluid snap-section d-flex flex-column justify-content-center align-items-center min-vh-100 py-3 text-center">
-                <h4 class="text-white">ProntoPay</h4>
+                <h4 class="text-white my-2">ProntoPay</h4>
                 <div>
                     <a href="https://www.facebook.com/" target="_blank">
                         <img src="images/facebook.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
@@ -577,16 +626,16 @@
                         <img src="images/twitter.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
                     </a>
                 </div>
-                <p class="text-white" style="font-size: 0.8rem;">
+                <p class="text-white my-2" style="font-size: 0.8rem;">
                     ProntoPay Ltd is a trading name of ProntoPay which is a company registered in England and Wales Company No.15091950 with a registered address of 19 Maritime StreetLondon, England, SE16 7FU.
                 </p>
-                <p class="text-white" style="font-size: 0.8rem;">
+                <p class="text-white my-2" style="font-size: 0.8rem;">
                     Payment Services are provided by Equals Connect Limited, registered in England and Wales (registered no. 07131446). Registered Office: Vintners’ Place, 68 Upper Thames St, London, EC4V 3BJ. Equals Connect Limited are authorised by the Financial Conduct Authority to provide payment services (FRN: 671508).​
                 </p>
-                <p class="text-white" style="font-size: 0.8rem;">
+                <p class="text-white my-2" style="font-size: 0.8rem;">
                     ProntoPay's payment and foreign currency exchange services are provided by Global Currency Exchange Network Ltd T/A GC Partners. Global Currency Exchange Network Ltd is authorised by the FCA under the Payment Services Regulations, 2017 (FRN: 504346). Registered as a Money Services Business, regulated by HM Revenue & Customs ("HMRC") under the Money Laundering Regulations 2017. (Registration number is 12137189). Registered in England and Wales. Company number 04675786. Registered Office 3rd Floor 100 New Bond Street, London, England, W1S 1SP
                 </p>
-                <p class="text-white" style="font-size: 0.8rem;">
+                <p class="text-white my-2" style="font-size: 0.8rem;">
                     ProntoPay is partnered with iBanFirst SA, a duly authorised payment institution under Belgian law, regulated by the National Bank of Belgium (under CBE number 0849.872.824), who is providing the payment and associated foreign exchange services to ProntoPay’s customers.
                 </p>
             </div>
@@ -597,27 +646,76 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script>
             let lastScrollTop = 0;
-const scrollContainer = document.querySelector('.scroll-container');
-const navbar = document.querySelector('.navbar');
+            const scrollContainer = document.querySelector('.scroll-container');
+            const navbar = document.querySelector('.navbar');
 
-scrollContainer.addEventListener('scroll', () => {
-  let currentScrollTop = scrollContainer.scrollTop;
+            scrollContainer.addEventListener('scroll', () => {
+            let currentScrollTop = scrollContainer.scrollTop;
 
-  if (currentScrollTop > lastScrollTop) {
-    // Scrolling down
-    if (!navbar.classList.contains('hidden')) {
-      navbar.classList.add('hidden'); // Hide the navbar
+            if (currentScrollTop > lastScrollTop) {
+                // Scrolling down
+                if (!navbar.classList.contains('hidden')) {
+                navbar.classList.add('hidden'); // Hide the navbar
+                }
+            } else {
+                // Scrolling up
+                if (navbar.classList.contains('hidden')) {
+                navbar.classList.remove('hidden'); // Show the navbar
+                }
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
+            });
+
+
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+    const statElements = document.querySelectorAll('.stat-value');
+
+    // Function to animate the count
+    function countUp(element, target, suffix) {
+        const startValue = parseInt(element.textContent, 10);
+        const endValue = parseInt(target, 10);
+        const duration = 2000; // Duration in milliseconds
+        const stepTime = 50;
+        const steps = duration / stepTime;
+        const increment = Math.abs(endValue - startValue) / steps;
+        const isCountdown = startValue > endValue;
+
+        let currentValue = startValue;
+        const interval = setInterval(() => {
+            currentValue += isCountdown ? -increment : increment;
+            if ((isCountdown && currentValue <= endValue) || (!isCountdown && currentValue >= endValue)) {
+                currentValue = endValue;
+                clearInterval(interval);
+            }
+            element.textContent = Math.floor(currentValue) + suffix;
+        }, stepTime);
     }
-  } else {
-    // Scrolling up
-    if (navbar.classList.contains('hidden')) {
-      navbar.classList.remove('hidden'); // Show the navbar
-    }
-  }
 
-  lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
+    // Function to handle the intersection observer
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target.getAttribute('data-target');
+                const suffix = entry.target.getAttribute('data-suffix');
+                countUp(entry.target, target, suffix);
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // Create an intersection observer
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5 // Adjust this value to determine when the element is considered in view
+    });
+
+    // Observe each stat element
+    statElements.forEach(stat => {
+        observer.observe(stat);
+    });
 });
-
 
         </script>
     </body>
