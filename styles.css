@@ -20,6 +20,8 @@ body {
     scroll-snap-align: start;
     height: 100vh; /* Full height for sections that need snapping */
     width: 100vw;
+    min-width: 1024px;
+    max-width: 1600px;
     background-color: black; /* Adjust as needed */
     color: white; /* Adjust as needed */
 }
@@ -110,6 +112,9 @@ body {
     transition: filter 0.3s ease-in-out; /* Smooth transition for blur effect */
 }
 
+.card-img {
+    mask-image: radial-gradient(circle, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 85%);
+}
 
 .glow {
     box-shadow: 0 0 15px rgba(136, 203, 236, 0.6); /* Light white glow */
