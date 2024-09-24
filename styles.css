@@ -1,8 +1,9 @@
-html, body {
+html, body, main {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     height: 100%;
+    overscroll-behavior: none;
 }
 
 body {
@@ -53,6 +54,10 @@ body {
 .navbar .navbar-brand,
 .navbar .nav-item {
     color: white; /* Set text color to white */
+}
+
+.nav-item {
+    height: 50px;
 }
 
 /* Navbar brand (logo link) styling */
@@ -106,10 +111,9 @@ body {
     opacity: 1; /* Ensure dropdown is fully visible */
 }
 
-/* Ensure blur effect */
 .blur-content {
-    filter: blur(5px); /* Adjust blur intensity as needed */
-    transition: filter 0.3s ease-in-out; /* Smooth transition for blur effect */
+    filter: blur(5px); /* Adjust blur level */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for both blur and unblur */
 }
 
 .card-img {

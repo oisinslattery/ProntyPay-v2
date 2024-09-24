@@ -22,7 +22,7 @@
               <ul class="navbar-nav">
                 <!-- Dropdown Menu -->
                 <li class="nav-item">
-                  <a class="nav-link" href="accounts.html">Accounts</a>
+                  <a class="nav-link" href="accounts.html" >Accounts</a>
                   <div class="full-width-dropdown">
                     <div class="dropdown-column">
                         <h5 class="dropdown-item">Multi-currency Account</h5>
@@ -116,8 +116,6 @@
           </nav>
 
         <main class="scroll-container">
-            
-
             <div class="container-fluid snap-section text-white" style="height: 100vh; display: flex; flex-direction: column;">
                 <div class="card text-center text-white" style="background-color: black; height: 100%; position: relative;">
                     <img src="https://media.istockphoto.com/id/1405728317/tr/vekt%C3%B6r/global-network-connection-world-map-point-and-line-composition-concept-of-global-business.jpg?s=612x612&w=0&k=20&c=AyE5YPmWa6h4MJA3BT9ZFNhq02DiJ-2eENml0c_05Xs=" 
@@ -647,28 +645,38 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script>
             let lastScrollTop = 0;
-            const scrollContainer = document.querySelector('.scroll-container');
-            const navbar = document.querySelector('.navbar');
+const scrollContainer = document.querySelector('.scroll-container');
+const navbar = document.querySelector('.navbar');
 
-            scrollContainer.addEventListener('scroll', () => {
-            let currentScrollTop = scrollContainer.scrollTop;
+scrollContainer.addEventListener('scroll', () => {
+    let currentScrollTop = scrollContainer.scrollTop;
+    let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
 
-            if (currentScrollTop > lastScrollTop) {
-                // Scrolling down
-                if (!navbar.classList.contains('hidden')) {
-                navbar.classList.add('hidden'); // Hide the navbar
-                }
-            } else {
-                // Scrolling up
-                if (navbar.classList.contains('hidden')) {
-                navbar.classList.remove('hidden'); // Show the navbar
-                }
-            }
+    // Prevent overscrolling at the top
+    if (currentScrollTop <= 0) {
+        scrollContainer.scrollTop = 0;
+    }
 
-            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
-            });
+    // Prevent overscrolling at the bottom
+    if (currentScrollTop >= maxScrollTop) {
+        scrollContainer.scrollTop = maxScrollTop;
+    }
 
-            
+    // Handle navbar visibility based on scroll direction
+    if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        if (!navbar.classList.contains('hidden')) {
+            navbar.classList.add('hidden'); // Hide the navbar
+        }
+    } else {
+        // Scrolling up
+        if (navbar.classList.contains('hidden')) {
+            navbar.classList.remove('hidden'); // Show the navbar
+        }
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
+});
 
 
         </script>
@@ -717,6 +725,45 @@
     // Observe each stat element
     statElements.forEach(stat => {
         observer.observe(stat);
+    });
+});
+
+        </script>
+        <script>
+const mainContent = document.querySelector('main'); // Assuming <main> is the tag
+
+// Function to determine if the navbar is visible
+function isNavbarVisible() {
+    return !navbar.classList.contains('hidden'); // Adjust based on your hidden class
+}
+
+// Add event listeners for hover on navbar items
+const navItems = document.querySelectorAll('.nav-item');
+
+navItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        if (isNavbarVisible()) {
+            mainContent.classList.add('blur-content'); // Add blur on hover if navbar is visible
+        }
+    });
+
+    item.addEventListener('mouseleave', () => {
+        mainContent.classList.remove('blur-content'); // Remove blur when not hovering
+    });
+});
+
+// Also apply blur when dropdown is shown
+const dropdowns = document.querySelectorAll('.full-width-dropdown');
+
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('mouseenter', () => {
+        if (isNavbarVisible()) {
+            mainContent.classList.add('blur-content'); // Add blur when hovering over dropdown if navbar is visible
+        }
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+        mainContent.classList.remove('blur-content'); // Remove blur when not hovering
     });
 });
 
