@@ -77,7 +77,7 @@ body {
     left: 0;
     top: 100%; /* Directly below the navbar */
     width: 100vw; /* Full viewport width */
-    background-color: #8090a0; /* Adjusted for visibility */
+    background-color: #9d9fa1; /* Adjusted for visibility */
     display: none; /* Hidden by default */
     z-index: 9999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -101,7 +101,7 @@ body {
 }
 
 .dropdown-item:hover {
-    background-color: #495057;
+    background-color: #9d9fa1;
 }
 
 /* Show dropdown on hover of the nav-item or dropdown itself */
@@ -109,6 +109,12 @@ body {
 .full-width-dropdown:hover {
     display: flex; /* Show dropdown on hover */
     opacity: 1; /* Ensure dropdown is fully visible */
+}
+
+.navbar:hover,
+.navbar .dropdown:hover,
+.navbar .dropdown-menu:hover {
+    background-color: #9d9fa1;
 }
 
 .blur-content {
