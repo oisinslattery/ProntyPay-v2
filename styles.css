@@ -117,6 +117,19 @@ body {
     background-color: #9d9fa1;
 }
 
+.arrow {
+    font-size: 0.8em; /* Adjust size as needed */
+    color: white; /* Change color if necessary */
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+    display: inline-block; /* Ensure proper alignment */
+    transform: rotate(0deg); /* Default pointing down */
+}
+
+.nav-item:hover .arrow {
+    transform: rotate(90deg); /* Rotate to point left on hover */
+}
+
+
 .blur-content {
     filter: blur(5px); /* Adjust blur level */
     transition: filter 0.3s ease-in-out; /* Smooth transition for both blur and unblur */
@@ -127,7 +140,13 @@ body {
 }
 
 .glow {
-    box-shadow: 0 0 15px rgba(136, 203, 236, 0.6); /* Light white glow */
+    box-shadow: 0 0 15px rgba(136, 203, 236, 0.6); /* Initial light glow */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.glow:hover {
+    box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
+                0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread */
 }
 
 .pp-button {

@@ -969,3 +969,227 @@
     background-color: #495057;
 }
 
+<script>
+            let lastScrollTop = 0;
+const scrollContainer = document.querySelector('.scroll-container');
+const navbar = document.querySelector('.navbar');
+
+scrollContainer.addEventListener('scroll', () => {
+  let currentScrollTop = scrollContainer.scrollTop;
+
+  console.log(`Current Scroll Top: ${currentScrollTop}`);
+  
+  if (currentScrollTop > lastScrollTop) {
+    // Scrolling down
+    if (!navbar.classList.contains('hidden')) {
+      console.log('Hiding navbar');
+      navbar.classList.add('hidden'); // Hide the navbar
+    }
+  } else {
+    // Scrolling up
+    if (navbar.classList.contains('hidden')) {
+      console.log('Showing navbar');
+      navbar.classList.remove('hidden'); // Show the navbar
+    }
+  }
+
+  lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
+});
+
+
+        </script>
+
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand mx-3" href="index.html">
+                <img src="images/ProntoPay Logo.png" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <!-- Dropdown Menu -->
+                <li class="nav-item">
+                  <a class="nav-link" href="accounts.html" >Accounts <span class="arrow">&gt;</span></a>
+                  <div class="full-width-dropdown d-flex">
+                        <div class="dropdown-column flex-fill d-flex flex-column justify-content-center align-items-center text-center" style="max-width: 33%;">
+                            <h5 class="dropdown-item w-100 text-wrap">Open an account to process all your currency needs 50% cheaper than your current provider, guaranteed.</h5>
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-multi">
+                                <div class="me-3">
+                                    <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1">Multi-currency Account</h5>
+                                    <p class="mb-0">Open a single account to transact in over 150 countries</p>
+                                </div>
+                            </a>                        
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-europe">
+                                <div class="me-3">
+                                    <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1">Europe</h5>
+                                    <p class="mb-0">Open an account to expand your business in Europe</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center" href="accounts.html#account-switzerland">
+                                <div class="me-3">
+                                    <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1">Switzerland</h5>
+                                    <p class="mb-0">Open a Swiss account to receive CHF</p>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-uae">
+                                <div class="me-3">
+                                    <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1">United Arab Emirates</h5>
+                                    <p class="mb-0">Open an account for your real estate investments</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-uk">
+                                <div class="me-3">
+                                    <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1">United Kingdom</h5>
+                                    <p class="mb-0">Open a local UK account for all your GBP needs</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center" href="accounts.html#account-us">
+                                <div class="me-3">
+                                    <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1">United Sates of America</h5>
+                                    <p class="mb-0">Open a USD account to have access to the world's strongest currency</p>
+                                </div>
+                            </a> 
+                        </div>
+                    </div>                            
+                </li>
+
+                <!-- Dropdown Menu -->
+                <li class="nav-item">
+                    <a class="nav-link" href="industries.html">Industries <span class="arrow">&gt;</span></a>
+                    <div class="full-width-dropdown d-flex">
+                        <div class="dropdown-column flex-fill d-flex flex-column justify-content-center align-items-center text-center" style="max-width: 33%;">
+                            <h5 class="dropdown-item w-100 text-wrap">IND Whether you are a start-up, raising funds for the first time, a 100+ year old business with regular payments or an investment management organisation, we can support your currency needs.</h5>
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Family-Office</h5>
+                                    <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
+                                </div>
+                            </a>                        
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Corporates</h5>
+                                    <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Real Estate</h5>
+                                    <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Personal</h5>
+                                    <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div> 
+                  </li>
+
+                  <!-- Dropdown Menu -->
+                <li class="nav-item">
+                    <a class="nav-link" href="partnerships.html">Partnerships <span class="arrow">&gt;</span></a>
+                    <div class="full-width-dropdown d-flex">
+                        <div class="dropdown-column flex-fill d-flex flex-column justify-content-center align-items-center text-center" style="max-width: 33%;">
+                            <h5 class="dropdown-item w-100 text-wrap">PAR Whether you are a start-up, raising funds for the first time, a 100+ year old business with regular payments or an investment management organisation, we can support your currency needs.</h5>
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Family-Office</h5>
+                                    <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
+                                </div>
+                            </a>                        
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Corporates</h5>
+                                    <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Real Estate</h5>
+                                    <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Personal</h5>
+                                    <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div> 
+                  </li>
+
+                  <!-- Dropdown Menu -->
+                <li class="nav-item">
+                    <a class="nav-link" href="faqs.html">FAQs <span class="arrow">&gt;</span></a>
+                    <div class="full-width-dropdown d-flex">
+                        <div class="dropdown-column flex-fill d-flex flex-column justify-content-center align-items-center text-center" style="max-width: 33%;">
+                            <h5 class="dropdown-item w-100 text-wrap">Whether you are a start-up, raising funds for the first time, a 100+ year old business with regular payments or an investment management organisation, we can support your currency needs.</h5>
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Family-Office</h5>
+                                    <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
+                                </div>
+                            </a>                        
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Corporates</h5>
+                                    <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="dropdown-column flex-fill" style="max-width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Real Estate</h5>
+                                    <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
+                                <div class="text-start">
+                                    <h5 class="mb-1">Personal</h5>
+                                    <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div> 
+                  </li>
+
+              </ul>
+            </div>
+          </nav>
