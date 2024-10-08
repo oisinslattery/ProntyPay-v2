@@ -4,10 +4,44 @@ html, body, main {
     overflow-x: hidden;
     height: 100%;
     overscroll-behavior: none;
+    overflow: hidden;
 }
 
 body {
     overflow-y: hidden; /* Prevent default vertical scrolling */
+}
+
+.pp-text-blue{
+    color: rgb(136, 203, 236);
+}
+
+a.pp-text-blue {
+    color: rgb(136, 203, 236);
+    text-decoration: none; /* Optional: remove underline */
+}
+
+.stat-value {
+    color: rgb(136, 203, 236);
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+a.pp-text-blue:hover,
+a.pp-text-blue:visited,
+a.pp-text-blue:focus,
+a.pp-text-blue:active {
+    color: rgb(136, 203, 236); /* Ensures the color remains consistent */
+}
+
+.font-500 {
+    font-weight: 500;
+}
+
+.navbar-icon {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover;
 }
 
 .scroll-container {
@@ -15,6 +49,12 @@ body {
     overflow-y: scroll;
     height: 100vh; /* Full height for the scrollable container */
     position: relative;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .snap-section {
