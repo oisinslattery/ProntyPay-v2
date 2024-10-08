@@ -77,7 +77,7 @@ body {
     left: 0;
     top: 100%; /* Directly below the navbar */
     width: 100vw; /* Full viewport width */
-    background-color: #9d9fa1; /* Adjusted for visibility */
+    background-color: #424242; /* Adjusted for visibility */
     display: none; /* Hidden by default */
     z-index: 9999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -114,7 +114,7 @@ body {
 .navbar:hover,
 .navbar .dropdown:hover,
 .navbar .dropdown-menu:hover {
-    background-color: #9d9fa1;
+    background-color: #424242;
 }
 
 .arrow {
@@ -250,3 +250,73 @@ body {
     font-size: 1.5rem;
     text-decoration: none;
 }
+
+.hidden {
+    display: none; /* Ensure the replacement divs are hidden initially */
+}
+
+.replacement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: none; /* Start hidden */
+}
+
+.card-container {
+    position: relative; /* Ensure the replacements overlay the cards */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.clickable {
+    cursor: pointer; /* Make it clear that the h5 elements are clickable */
+    transition: transform 0.2s; /* Smooth transition for the lift effect */
+    position: relative; /* Allow the text to move without affecting the parent */
+    display: inline-block; /* Ensure the text takes only necessary space */
+}
+
+.clickable:hover {
+    transform: translateY(-5px); /* Lift the text slightly on hover */
+}
+
+.accordion-button {
+    position: relative;
+    color: white !important;
+    background: none !important;
+    background-image: linear-gradient(to right, black 0%, rgb(136, 203, 236) 100%) !important;
+    border: none !important;
+    border-radius: 5px !important; /* Slightly rounded corners */
+    z-index: 1;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none !important;
+  }
+  
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
