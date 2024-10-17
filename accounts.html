@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body class="text-white" style="background-color: black;">
+    <body>
 
         <nav class="navbar navbar-expand-lg p-0">
             <a class="navbar-brand mx-3" href="index.html">
@@ -182,7 +182,7 @@
           </nav>
            
         <main class="scroll-container">
-            <div class="container-fluid snap-section accounts px-5" style="background-color: black; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+            <div class="container-fluid snap-section accounts px-5 acc-ind-layout" style=" align-items: flex-start; height: 90vh;">
                 <h1 class="display-1" style="margin-bottom: 20px; text-align: left; width: 100%;">Accounts</h1> <!-- Adjust margin as needed -->
                 <div class="card text-left text-white" style="background-color: black; height: 80%; width: 100%; position: relative; display: flex; flex-direction: column;">
                     <img src="https://cdn.pixabay.com/photo/2019/09/16/06/26/fog-4479936_1280.jpg" 
@@ -192,40 +192,40 @@
                         <div style="margin-top: 20px;">
                             <p class="display-6">Seamless global transactions. Access in over 150 countries.</p>
                         </div>
-                        <div class="p-0" style="flex: 1; display: flex; align-items: center;">
-                            <ul class="pp-text-blue">
-                                <li class="my-5"><a class="lead pp-text-blue" style="font-size: 2rem; font-weight: 400;" href="#account-multi">Multi-currency Account</a></li>
-                                <li class="my-5"><a class="lead pp-text-blue" style="font-size: 2rem; font-weight: 400;" href="#account-europe">Europe</a></li>
-                                <li class="my-5"><a class="lead pp-text-blue" style="font-size: 2rem; font-weight: 400;" href="#account-switzerland">Switzerland</a></li>
-                                <li class="my-5"><a class="lead pp-text-blue" style="font-size: 2rem; font-weight: 400;" href="#account-uae">United Arab Emirates</a></li>
-                                <li class="my-5"><a class="lead pp-text-blue" style="font-size: 2rem; font-weight: 400;" href="#account-uk">United Kingdom</a></li>
-                                <li class="my-5"><a class="lead pp-text-blue" style="font-size: 2rem; font-weight: 400;" href="#account-usa">United States of America</a></li>
+                        <div class="accounts-list d-flex flex-column justify-content-between" style="height: 100%;">
+                            <ul>
+                                <li><a class="lead accounts-arrow" href="#account-multi"><span class="arrow">&gt;</span>Multi-currency Account</a></li>
+                                <li><a class="lead accounts-arrow" href="#account-europe"><span class="arrow">&gt;</span>Europe</a></li>
+                                <li><a class="lead accounts-arrow" href="#account-switzerland"><span class="arrow">&gt;</span>Switzerland</a></li>
+                                <li><a class="lead accounts-arrow" href="#account-uae"><span class="arrow">&gt;</span>United Arab Emirates</a></li>
+                                <li><a class="lead accounts-arrow" href="#account-uk"><span class="arrow">&gt;</span>United Kingdom</a></li>
+                                <li><a class="lead accounts-arrow" href="#account-usa"><span class="arrow">&gt;</span>United States of America</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="account-multi" class="container-fluid snap-section multi-currency" style="background-color: black; height: 100vh; display: flex; justify-content: center; align-items: center;">
-                <div class="row content-wrapper" style="width: 100%; height: 70vh; display: flex;">
+            <div id="account-multi" class="container-fluid snap-section acc-ind-layout" style="height: 90vh;">
+                <div class="content-wrapper" style="width: 100%;  display: flex;">
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
                         <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
-                            <img src="https://cdn.pixabay.com/photo/2021/08/23/07/40/dollar-6566982_1280.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://cdn.pixabay.com/photo/2021/08/23/07/40/dollar-6566982_1280.jpg" class="px-3" style="width: 100%; height: 100%; object-fit: cover; align-self: center;">
                         </div>
                     </div>
-                    <div class="col col-md-4 d-flex flex-column justify-content-center p-5 text-column" style="width: 40%;">
+                    <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
                         <h5 class="display-6 mb-5 pp-text-blue">Multi-currency Account</h5>
                         <p class="lead">Unlock the power of global transactions with our multi-currency account, offering seamless access to over 150 countries. Whether you're conducting business internationally or managing personal finances across borders, our versatile account empowers you to transact in multiple currencies with ease and efficiency. Say goodbye to the hassle of currency conversions and embrace a streamlined approach to managing your global finances.</p>
-                        <a class="pp-link mt-3">
+                        <a class="pp-link">
                             <div class="pp-button text-center" style="width: 150px;">Learn More</div>
                         </a>
                     </div>
                 </div>
             </div>
             
-            <div id="account-europe" class="container-fluid snap-section multi-currency" style="background-color: black; height: 100vh; display: flex; justify-content: center; align-items: center;">
-                <div class="content-wrapper" style="width: 100%; height: 70vh; display: flex;">
-                    <div class="col col-md-4 d-flex flex-column justify-content-center p-5 text-column" style="width: 40%;">
+            <div id="account-europe" class="container-fluid snap-section acc-ind-layout" style="height: 90vh;">
+                <div class="content-wrapper" style="width: 100%; display: flex;">
+                    <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
                         <h5 class="display-6 mb-5 pp-text-blue">Europe</h5>
                         <p class="lead">Expand your business horizons in Europe with our specialized FX services. Whether you're establishing operations, conducting trade, or investing in the European market, our comprehensive solutions support your growth objectives. From navigating currency fluctuations to executing transactions in euros and beyond, our experienced team provides strategic guidance and seamless execution, empowering you to capitalize on opportunities across the continent.</p>
                         <a class="pp-link mt-3">
@@ -233,21 +233,21 @@
                         </a>
                     </div>
                     <div class="col col-md-8 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
-                        <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+                        <div class="image-container">
                             <img src="./images/europe.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="account-switzerland" class="container-fluid snap-section multi-currency" style="background-color: black; height: 100vh; display: flex; justify-content: center; align-items: center;">
-                <div class="row content-wrapper" style="width: 100%; height: 70vh; display: flex;">
+            <div id="account-switzerland" class="container-fluid snap-section acc-ind-layout" style="height: 90vh;">
+                <div class="row content-wrapper" style="width: 100%; display: flex;">
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
-                        <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+                        <div class="image-container">
                             <img src="./images/switzerland-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
-                    <div class="col col-md-4 d-flex flex-column justify-content-center p-5 text-column" style="width: 40%;">
+                    <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
                         <h5 class="display-6 mb-5 pp-text-blue">Switzerland</h5>
                         <p class="lead">Experience the benefits of a Swiss account tailored to your financial needs. Whether you're a discerning investor seeking stability or a business looking to tap into Switzerland's renowned financial ecosystem, our FX solutions offer a gateway to seamless transactions in Swiss francs (CHF). With our expertise in currency management and risk mitigation, you can trust us to optimize your Swiss financial endeavors with precision and efficiency.</p>
                         <a class="pp-link mt-3">
@@ -257,9 +257,9 @@
                 </div>
             </div>
             
-            <div class="container-fluid snap-section multi-currency" style="background-color: black; height: 100vh; display: flex; justify-content: center; align-items: center;">
-                <div id="account-uae" class="row content-wrapper" style="width: 100%; height: 70vh; display: flex;">
-                    <div class="col col-md-4 d-flex flex-column justify-content-center p-5 text-column" style="width: 40%;">
+            <div id="account-uae" class="container-fluid snap-section acc-ind-layout" style="height: 90vh;">
+                <div class="row content-wrapper" style="width: 100%; display: flex;">
+                    <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
                         <h5 class="display-6 mb-5 pp-text-blue">United Arab Emirates</h5>
                         <p class="lead">Elevate your real estate investments in the United Arab Emirates (UAE) with our specialized FX services. Whether you're purchasing property, managing rental income, or conducting transactions in dirhams (AED), we provide tailored solutions to enhance your financial outcomes. From navigating regulatory requirements to mitigating currency risk, our experienced team ensures smooth and efficient FX transactions, empowering you to capitalize on opportunities in one of the world's most dynamic real estate markets.</p>
                         <a class="pp-link mt-3">
@@ -267,21 +267,21 @@
                         </a>
                     </div>
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
-                        <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+                        <div class="image-container">
                             <img src="./images/uae-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="container-fluid snap-section multi-currency" style="background-color: black; height: 100vh; display: flex; justify-content: center; align-items: center;">
-                <div id="account-uk" class="row content-wrapper" style="width: 100%; height: 70vh; display: flex;">
+            <div id="account-uk" class="container-fluid snap-section acc-ind-layout" style="height: 90vh;">
+                <div class="row content-wrapper" style="width: 100%; display: flex;">
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
-                        <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+                        <div class="image-container">
                             <img src="./images/uk-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
-                    <div class="col col-md-4 d-flex flex-column justify-content-center p-5 text-column" style="width: 40%;">
+                    <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
                         <h5 class="display-6 mb-5 pp-text-blue">United Kingdom</h5>
                         <p class="lead">Optimize your GBP transactions with our dedicated UK account services. Whether you're a business operating in the UK market or an individual managing personal finances, our FX solutions offer seamless access to British pounds (GBP) with efficiency and convenience. From opening local accounts to executing transactions and managing currency risk, our comprehensive services cater to your specific needs, ensuring a smooth and reliable experience in the UK financial landscape.</p>
                         <a class="pp-link mt-3">
@@ -291,9 +291,9 @@
                 </div>
             </div>
             
-            <div class="container-fluid snap-section multi-currency" style="background-color: black; height: 100vh; display: flex; justify-content: center; align-items: center;">
-                <div id="account-usa" class="row content-wrapper" style="width: 100%; height: 70vh; display: flex;">
-                    <div class="col col-md-4 d-flex flex-column justify-content-center p-5 text-column" style="width: 40%;">
+            <div id="account-usa" class="container-fluid snap-section acc-ind-layout" style="height: 90vh;">
+                <div class="row content-wrapper" style="width: 100%; display: flex;">
+                    <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
                         <h5 class="display-6 mb-5 pp-text-blue">United States of America</h5>
                         <p class="lead">Harness the strength of the world's leading currency with our USD account services. Whether you're conducting international trade, investing in US assets, or managing personal finances, our FX solutions offer seamless access to US dollars (USD) with unparalleled convenience. From opening local accounts to executing transactions and hedging against currency fluctuations, our experienced team provides strategic guidance and reliable execution, empowering you to navigate the complexities of the US financial market with confidence.</p>
                         <a class="pp-link mt-3">
@@ -301,7 +301,7 @@
                         </a>
                     </div>
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
-                        <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+                        <div class="image-container">
                             <img src="./images/usa-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
@@ -408,38 +408,45 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script>
             let lastScrollTop = 0;
-            const scrollContainer = document.querySelector('.scroll-container');
-            const navbar = document.querySelector('.navbar');
+const scrollContainer = document.querySelector('.scroll-container');
+const navbar = document.querySelector('.navbar');
 
-            scrollContainer.addEventListener('scroll', () => {
-                let currentScrollTop = scrollContainer.scrollTop;
-                let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+scrollContainer.addEventListener('scroll', () => {
+    let currentScrollTop = scrollContainer.scrollTop;
+    let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+    
+    // Set a small threshold to ignore small scrolls (bounce effect)
+    const threshold = 100;
 
-                // Prevent overscrolling at the top
-                if (currentScrollTop <= 0) {
-                    scrollContainer.scrollTop = 0;
-                }
+    // Prevent overscrolling at the top
+    if (currentScrollTop <= threshold) {
+        scrollContainer.scrollTop = 0; // Force it to stay at the top
+        navbar.classList.remove('hidden'); // Ensure the navbar is visible
+        lastScrollTop = 0; // Reset scroll tracking
+        return;
+    }
 
-                // Prevent overscrolling at the bottom
-                if (currentScrollTop >= maxScrollTop) {
-                    scrollContainer.scrollTop = maxScrollTop;
-                }
+    // Prevent overscrolling at the bottom
+    if (currentScrollTop >= maxScrollTop) {
+        scrollContainer.scrollTop = maxScrollTop;
+    }
 
-                // Handle navbar visibility based on scroll direction
-                if (currentScrollTop > lastScrollTop) {
-                    // Scrolling down
-                    if (!navbar.classList.contains('hidden')) {
-                        navbar.classList.add('hidden'); // Hide the navbar
-                    }
-                } else {
-                    // Scrolling up
-                    if (navbar.classList.contains('hidden')) {
-                        navbar.classList.remove('hidden'); // Show the navbar
-                    }
-                }
+    // Handle navbar visibility based on scroll direction
+    if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        if (!navbar.classList.contains('hidden')) {
+            navbar.classList.add('hidden'); // Hide the navbar
+        }
+    } else if (currentScrollTop < lastScrollTop) {
+        // Scrolling up
+        if (navbar.classList.contains('hidden')) {
+            navbar.classList.remove('hidden'); // Show the navbar
+        }
+    }
 
-                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
-            });
+    lastScrollTop = currentScrollTop;
+});
+
 
         </script>
         <script>

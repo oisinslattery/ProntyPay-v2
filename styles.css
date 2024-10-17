@@ -9,6 +9,11 @@ html, body, main {
 
 body {
     overflow-y: hidden; /* Prevent default vertical scrolling */
+    background-color: black !important;
+    color: white !important
+}
+.card {
+    background-color: black !important;
 }
 
 .pp-text-blue{
@@ -18,6 +23,66 @@ body {
 a.pp-text-blue {
     color: rgb(136, 203, 236);
     text-decoration: none; /* Optional: remove underline */
+}
+
+.content-wrapper{
+    padding: 0 15px;
+    align-items: center;
+}
+
+.accounts-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    color: rgb(136, 203, 236);
+}
+
+.accounts-list ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.accounts-list li {
+    margin: 0;
+}
+
+.accounts-list li a {
+    color: rgb(136, 203, 236);
+    font-size: 2rem; 
+    font-weight: 400;
+}
+
+.image-column {
+    width: 60%; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.acc-ind-layout {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.multi-card,
+.multi-card:hover,
+.multi-card:visited,
+.multi-card:focus,
+.multi-card:active  {
+    background-color: transparent; 
+    position: relative;
+}
+
+.multi-card-img{
+    opacity: 0.5; 
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover;
 }
 
 .stat-value {
@@ -65,7 +130,18 @@ a.pp-text-blue:active {
     max-width: 1600px;
     background-color: black; /* Adjust as needed */
     color: white; /* Adjust as needed */
+    display: flex; 
+    flex-direction: column;
+    margin-top: 20px;
+
 }
+
+@media (max-width: 1024px) {
+    .snap-section {
+        max-width: 1024px; /* Adjust max-width for smaller screens */
+    }
+}
+
 
 /* Navbar style */
 .navbar {
@@ -94,6 +170,10 @@ a.pp-text-blue:active {
 .navbar .navbar-brand,
 .navbar .nav-item {
     color: white; /* Set text color to white */
+}
+
+.navbar h5, .navbar p {
+    text-wrap: wrap;
 }
 
 .nav-item {
@@ -129,20 +209,20 @@ a.pp-text-blue:active {
 
 /* Dropdown columns */
 .dropdown-column {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%; /* Adjust based on your layout needs */
 }
 
 .dropdown-item {
-    color: white;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Ensures all items have equal height */
+    padding: 10px; /* Adjust padding as needed */
     text-decoration: none;
 }
 
-.dropdown-item:hover {
-    background-color: #9d9fa1;
-}
 
 /* Show dropdown on hover of the nav-item or dropdown itself */
 .nav-item:hover .full-width-dropdown,
@@ -169,6 +249,20 @@ a.pp-text-blue:active {
     transform: rotate(90deg); /* Rotate to point left on hover */
 }
 
+.accounts-arrow:hover .arrow {
+    transform: rotate(90deg); /* Rotate to point left on hover */
+}
+
+.accounts-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accounts-list .arrow {
+    margin-right: 1rem;
+}
+
 
 .blur-content {
     filter: blur(5px); /* Adjust blur level */
@@ -187,6 +281,13 @@ a.pp-text-blue:active {
 .glow:hover {
     box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
                 0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread */
+}
+
+.dropdown-item:hover {
+    box-shadow: 
+                0 0 30px rgba(136, 203, 236, 1), /* Stronger outer glow */
+                0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread outer glow */
+    background-color: rgba(136, 203, 236, 0.6);
 }
 
 .pp-button {
@@ -220,7 +321,7 @@ a.pp-text-blue:active {
 }
 
 .currency-info img{
-    width: 40px;
+    width: 3vw;
 }
 
 .flag-cap{
@@ -277,10 +378,12 @@ a.pp-text-blue:active {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
   }
   
   .image-container img {
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
@@ -331,7 +434,7 @@ a.pp-text-blue:active {
 }
 
 .clickable:hover {
-    transform: translateY(-5px); /* Lift the text slightly on hover */
+    transform: translateY(-15px); /* Lift the text slightly on hover */
 }
 
 .accordion-button {
@@ -347,16 +450,3 @@ a.pp-text-blue:active {
   .accordion-button:focus {
     box-shadow: none !important;
   }
-  
-  
-  
-  
-
-  
-  
-  
-
-
-
-
-

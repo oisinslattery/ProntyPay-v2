@@ -8,8 +8,9 @@
         <link rel="icon" href="images/ProntoPay Logo - favicon.png" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+    
 
-    <body class="text-white" style="background-color: black;">
+    <body>
     
         <nav class="navbar navbar-expand-lg p-0">
             <a class="navbar-brand mx-3" href="index.html">
@@ -23,68 +24,90 @@
                 <!-- Dropdown Menu -->
                 <li class="nav-item">
                   <a class="nav-link" href="accounts.html">Accounts <span class="arrow">&gt;</span></a>
-                  <div class="full-width-dropdown">
-                    <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                        <h5 class="dropdown-item w-100 text-wrap pp-text-blue">Open an account to process all your currency needs 50% cheaper than your current provider, guaranteed.</h5>
+                  <div class="full-width-dropdown"  style="text-wrap: wrap;">
+                    <!-- First Dropdown Column with an Image -->
+                    <div class="d-flex" style="width: 100%;">
+
+                        <!-- First Dropdown Column with an Image -->
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-new">
+                                <div class="card text-white glow multi-card" style="background-color: transparent;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: auto;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2;">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">Click here to find out more about our accounts!</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-multi">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/multi-currency flag.jpg">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Multi-currency Account</h5>
+                                    <p class="mb-0">Open a single account to transact in over 150 countries</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-europe">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/eu flag.webp">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Europe</h5>
+                                    <p class="mb-0">Open an account to expand your business in Europe</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-switzerland">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/swiss flag.webp">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Switzerland</h5>
+                                    <p class="mb-0">Open a Swiss account to receive CHF</p>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-uae">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/uae flag.jpg">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">United Arab Emirates</h5>
+                                    <p class="mb-0">Open an account for your real estate investments</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-uk">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/uk flag.png">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">United Kingdom</h5>
+                                    <p class="mb-0">Open a local UK account for all your GBP needs</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-us">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/us flag.jpg">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">United States of America</h5>
+                                    <p class="mb-0">Open a USD account to have access to the world's strongest currency</p>
+                                </div>
+                            </a>
+                        </div>
+                    
                     </div>
-                    <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-multi">
-                            <div class="me-3">
-                                <img class="navbar-icon" src="images/flags/multi-currency flag.jpg">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Multi-currency Account</h5>
-                                <p class="mb-0">Open a single account to transact in over 150 countries</p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-europe">
-                            <div class="me-3">
-                                <img class="navbar-icon" src="images/flags/eu flag.webp">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Europe</h5>
-                                <p class="mb-0">Open an account to expand your business in Europe</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center" href="accounts.html#account-switzerland">
-                            <div class="me-3">
-                                <img class="navbar-icon" src="images/flags/swiss flag.webp">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Switzerland</h5>
-                                <p class="mb-0">Open a Swiss account to receive CHF</p>
-                            </div>
-                        </a>   
-                    </div>
-                    <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-uae">
-                            <div class="me-3">
-                                <img class="navbar-icon" src="images/flags/uae flag.jpg">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">United Arab Emirates</h5>
-                                <p class="mb-0">Open an account for your real estate investments</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-uk">
-                            <div class="me-3">
-                                <img class="navbar-icon" src="images/flags/uk flag.png">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">United Kingdom</h5>
-                                <p class="mb-0">Open a local UK account for all your GBP needs</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center" href="accounts.html#account-us">
-                            <div class="me-3">
-                                <img class="navbar-icon" src="images/flags/us flag.jpg">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">United States of America</h5>
-                                <p class="mb-0">Open a USD account to have access to the world's strongest currency</p>
-                            </div>
-                        </a> 
-                    </div>
+                    
+
+                    
                   </div>
                 </li>
 
@@ -92,10 +115,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="industries.html">Industries <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                      <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                        <h5 class="dropdown-item w-100 text-wrap">Whether you are a start-up, raising funds for the first time, a 100+ year old business with regular payments or an investment management organisation, we can support your currency needs.</h5>
-                      </div>
-                      <div class="dropdown-column">
+                      <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3">
+                        <div class="card text-white glow multi-card" style="background-color: transparent;">
+                            <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: auto;">
+                            <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2;">
+                                <div>
+                                    <h5 class="heading-1 heading p-3">Click here to find out more about our accounts!</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="dropdown-column p-0">
                         <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
                             <div class="text-start">
                                 <h5 class="mb-1 pp-text-blue">Family-Office</h5>
@@ -176,14 +206,31 @@
                         </div>
                     </div>
                   </li>
-
               </ul>
+
+              <div class="d-flex justify-content-end align-items-center mt-4 ms-auto"></div>
+                <div>
+                    <a class="pp-link m-0" href="">
+                        <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                            <p class="m-0" style="font-size: 0.8rem;">Login</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                        <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                            <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
+                        </div>
+                    </a>
+                </div>
+              </div>
+            </div>
             </div>
           </nav>
 
         <main class="scroll-container">
-            <div class="container-fluid snap-section text-white" style="height: 100vh; display: flex; flex-direction: column;">
-                <div class="card text-center text-white" style="background-color: black; height: 100%; position: relative;">
+            <div class="container-fluid snap-section">
+                <div class="card text-center text-white" style="height: 100%; position: relative;">
                     <video src="videos/watermarked_preview.mp4"
                         class="card-img"
                         autoplay
@@ -193,9 +240,9 @@
                     </video>
                     <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center">
                         <a class="pp-link mb-4" href="#">
-                            <img src="images/ProntoPay Logo.png" style="width: 170px;"/>
+                            <img src="images/ProntoPay Logo.png" style="width: 15%;"/>
                         </a>
-                        <h1 class="display-1 mt-2">Payments Beyond Borders</h1>
+                        <h1 class="display-1" style="margin-top: 2%;">Payments Beyond Borders</h1>
                         <div class="d-flex justify-content-center align-items-center mt-4">
                             <div class="m-2 p-1">
                                 <a class="pp-link m-2" href="">
@@ -218,11 +265,11 @@
                 </div>
             </div>
             
-            <div class="container-fluid snap-section text-white" style="height: 100vh; display: flex; flex-direction: column;">
+            <div class="container-fluid snap-section text-white">
                 <!-- Top section (70%) for the card content -->
                 <div class="row" style="flex: 0 0 70%; display: flex; justify-content: center; align-items: center;">
                     <!-- Card container with vertical centering -->
-                    <div class="card text-white row flex-row-reverse m-0" style="background-color: black; width: 100%;">
+                    <div class="card text-white row flex-row-reverse m-0" style="width: 100%;">
                         <img src="https://t4.ftcdn.net/jpg/03/79/60/99/360_F_379609986_HsnYbV7mTsiWsoDY4bfQvZC0XgrJXsGe.jpg" 
                              class="card-img-end m-4" 
                              style="width: 60%; height: auto; right: 0; opacity: 0.7;">
@@ -252,17 +299,17 @@
                 </div>
             </div>
             
-            <div class="container-fluid snap-section text-white" style="height: 100vh; display: flex; flex-direction: column;">
+            <div class="container-fluid snap-section text-white">
                 <!-- Top section (70%) for the card content -->
                 <div class="row" style="flex: 0 0 70%; display: flex; justify-content: center; align-items: center;">
                     <!-- Card container with vertical centering -->
-                    <div class="card text-white row flex-row-reverse m-0" style="background-color: black; width: 100%; position: relative;">
+                    <div class="card text-white row flex-row-reverse m-0" style="width: 100%; position: relative;">
                         <img src="https://www.datocms-assets.com/56018/1635356845-plane-and-sunset.jpg?auto=format&dpr=0.28&w=2121"
                              class="card-img-end m-4"
                              style="width: 60%; height: auto; right: 0; opacity: 0.7;">
                         <div class="card-img-overlay m-4" style="width: 60%; display: flex; flex-direction: column; justify-content: flex-start;">
-                            <h2 class="display-2" style="margin-bottom: 1.5rem;">
-                                Reducing the cost of <span class="display-2 pp-text-blue font-500">international transfers</span>
+                            <h2 class="display-2" style="margin-bottom: 1.5rem; font-size: 3rem;">
+                                Reducing the cost of <span class="display-2 pp-text-blue font-500" style="font-size: 3rem;">international transfers</span>
                             </h2>
                             <p class="lead" style="font-size: 1.5rem; max-width: 50vw;">
                                 We appreciate the fact that a payment is simply a click of a button and no one should be expected to be charged unnecessary fees. That’s why we have a price match <span>guarantee</span> to <span>beat your existing FX rate by 50%.</span>
@@ -275,15 +322,15 @@
                 <div class="row" style="flex: 0 0 30%; display: flex; justify-content: space-around; align-items: flex-start;">
                     <div class="col-4 d-flex flex-column align-items-center text-center" style="justify-content: flex-start;">
                         <span class="stat-value" data-target="75" data-suffix="%" style="font-size: 2.5rem;">0</span>
-                        <p class="display-6 m-0">cheaper than banks</p>
+                        <p class="display-6 m-0">cheaper than<br>banks</p>
                     </div>
                     <div class="col-4 d-flex flex-column align-items-center text-center" style="justify-content: flex-start;">
                         <span class="stat-value" data-target="50" data-suffix="%" style="font-size: 2.5rem;">0</span>
-                        <p class="display-6 m-0">cheaper than FinTechs</p>
+                        <p class="display-6 m-0">cheaper than<br>FinTechs</p>
                     </div>
                     <div class="col-4 d-flex flex-column align-items-center text-center" style="justify-content: flex-start;">
                         <span class="stat-value" data-target="0" data-suffix="" style="font-size: 2.5rem;">1000</span>
-                        <p class="display-6 m-0">transfer fees</p>
+                        <p class="display-6 m-0">transfer<br>fees</p>
                     </div>
                 </div>
                 
@@ -291,17 +338,17 @@
             </div>
             
 
-            <div class="container-fluid snap-section currency-info vh-100 d-flex flex-column" style="background-color: black;">
+            <div class="container-fluid snap-section currency-info">
                 <!-- Top 30% Section -->
                 <div class="px-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
-                    <h1 class="display-4 mt-5 pp-text-blue">Send and receive payments in 65+ currencies with  <span class="display-4 font-500">one multi-currency account</span></h1>
-                    <p class="lead mt-5" style="font-size: 1.5rem;">
+                    <h1 class="display-4" style="margin-top: 4vh; font-size: 6vh;">Send and receive payments in 65+ currencies with  <span class="display-4 pp-text-blue font-500" style="font-size: 6vh;">one multi-currency account</span></h1>
+                    <p class="lead p-0" style="font-size: 1.5rem; margin-top: 4vh;">
                         With local collection capabilities across Europe, UK, UAE and Africa, our team at ProntoPay can assist with payments across any part of the globe.
                     </p>
                 </div>
                 <!-- Bottom Section Centered in Viewport -->
                 <div class="d-flex flex-grow-1 justify-content-center align-items-center">
-                    <div class="row row-cols-3 row-cols-sm-4 row-cols-md-6 row-cols-lg-8 px-5" style="max-width: 1000px;">
+                    <div class="row row-cols-3 row-cols-sm-4 row-cols-md-6 row-cols-lg-8 px-5 pt-0" style="max-width: 1000px;">
                         <!-- Currency Information -->
                         <div class="col d-flex justify-content-center align-items-center">
                             <img src="images/flags/United Arab Emirates.png" alt="AED"/>
@@ -568,12 +615,11 @@
                                 <p class="h6 mb-0 ps-2 flag-cap">ZWL</p>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
-            <div class="container-fluid  snap-section your-needs" style="margin-top: 20px; background-color: black; height: 100vh; display: flex; flex-direction: column;">
-                <div class="px-5 mb-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
+            <div class="container-fluid snap-section your-needs">
+                <div class="px-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center; margin-top: 5vh">
                     <h1 class="display-4">Your <span class="display-4 pp-text-blue">Needs</span></h1>
                     <p class="lead mt-5" style="font-size: 1.5rem;">We understand the importance of getting the most out of your money, managing risk, and ensuring transactions are completed with safety and security in mind.</p>
                 </div>
@@ -608,15 +654,15 @@
                 </div>
             </div>
 
-            <div class="container-fluid  snap-section execution-fingertips" style="margin-top: 20px; background-color: black; height: 100vh; display: flex; flex-direction: column;">
-                <div class="px-5 mb-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
+            <div class="container-fluid snap-section execution-fingertips">
+                <div class="px-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center; margin-top: 5vh">
                 <h1 class="display-4">Execution <span class="display-4 pp-text-blue">At Your Fingertips</span></h1>
                 <p class="lead mt-5" style="font-size: 1.5rem;">Payments should be able to be done anywhere, anytime. That’s why we provide flexibility to complete transactions using our support team or using the online portal.</p>
                 </div>
                 <div class="row justify-content-around w-100 mt-5">
-                    <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 400px; min-width: 300px;">
-                        <div class="card text-white" style="background-color: transparent; position: relative;">
-                            <img src="images/web-browsing.jpg" style="opacity: 0.5; width: 100%; height: 300px; object-fit: cover;">
+                    <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 30vw; min-width: 300px;">
+                        <div class="card text-white multi-card" style="background-color: transparent;">
+                            <img class="multi-card-img" src="images/web-browsing.jpg">
                             <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center" style="z-index: 2;">
                                 <h5>Transact via our online portal</h5>
                                 <p>Access your account to transfer or exchange funds 24/7</p>
@@ -627,9 +673,9 @@
                         </div>
                     </div>
                     
-                    <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 400px; min-width: 300px;">
-                        <div class="card text-white" style="background-color: transparent; position: relative;">
-                            <img src="images/man_phone.png" style="opacity: 0.5; width: 100%; height: 300px; object-fit: cover;">
+                    <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 30vw; min-width: 300px;">
+                        <div class="card text-white multi-card" style="background-color: transparent;">
+                            <img class="multi-card-img" src="images/man_phone.png">
                             <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center" style="z-index: 2;">
                                 <h5>Transact via 24/7 hotline</h5>
                                 <p>Speak to one of our team over the phone for immediate support, transactions and updates</p>
@@ -639,8 +685,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 400px; min-width: 300px;">
-                        <div class="card text-white" style="background-color: transparent; position: relative;">
+                    <div class="col-12 col-md-4 d-flex justify-content-center mb-4" style="max-width: 30vw; min-width: 300px;">
+                        <div class="card text-white multi-card" style="background-color: transparent;">
                             <img src="images/whatsapp.jpg" style="opacity: 0.5; width: 100%; height: 300px; object-fit: cover;">
                             <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center" style="z-index: 2;">
                                 <h5>24/7 WhatsApp support</h5>
@@ -654,8 +700,8 @@
                 </div>
             </div>
 
-            <div class="container-fluid snap-section our-partners" style="margin-top: 20px; background-color: black; height: 100vh; display: flex; flex-direction: column;">
-                <div class="px-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center;">
+            <div class="container-fluid snap-section our-partners">
+                <div class="px-5" style="flex: 0 0 30%; display: flex; flex-direction: column; justify-content: center; margin-top: 5vh;">
                     <h1 class="display-4">Our <span class="display-4 pp-text-blue">Partners</span></h1>
                     <p class="lead mt-5" style="font-size: 1.5rem;">The safety of your funds is our number one priority. This is why ProntoPay is proudly partnered with FCA, DIFC and CBE regulated institutions.</p>
                 </div>
@@ -672,7 +718,7 @@
                     </div>
                     <div class="col-sm-3 my-2 d-flex align-items-center" style="display: flex; justify-content: center; padding: 1em; border-right: 2px solid white; height: 200px;">
                         <a href="https://ebury.com/e-blog/blog/ebury_post/how-to-keep-your-money-safe-and-secure/amp/" target="_blank">
-                            <img src="images/partner logos/Ebury.png" style="max-width: 100%; height: auto; display: block;"/>
+                            <img src="images/partner logos/Ebury.png" style="max-width: 100%; height: 80px; display: block;"/>
                         </a>
                     </div>
                     <div class="col-sm-3 my-2 d-flex align-items-center" style="display: flex; justify-content: center; padding: 1em; height: 200px;">
@@ -684,7 +730,7 @@
             </div>
             
 
-            <div class="container-fluid snap-section d-flex flex-column justify-content-center align-items-center min-vh-100 py-3 text-center">
+            <div class="container-fluid snap-section d-flex flex-column justify-content-center align-items-center py-3 text-center">
                 <h4 class="text-white my-2">ProntoPay</h4>
                 <div>
                     <a href="https://www.facebook.com/" target="_blank">
@@ -720,10 +766,16 @@ const navbar = document.querySelector('.navbar');
 scrollContainer.addEventListener('scroll', () => {
     let currentScrollTop = scrollContainer.scrollTop;
     let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+    
+    // Set a small threshold to ignore small scrolls (bounce effect)
+    const threshold = 250;
 
     // Prevent overscrolling at the top
-    if (currentScrollTop <= 0) {
-        scrollContainer.scrollTop = 0;
+    if (currentScrollTop <= threshold) {
+        scrollContainer.scrollTop = 0; // Force it to stay at the top
+        navbar.classList.remove('hidden'); // Ensure the navbar is visible
+        lastScrollTop = 0; // Reset scroll tracking
+        return;
     }
 
     // Prevent overscrolling at the bottom
@@ -737,14 +789,14 @@ scrollContainer.addEventListener('scroll', () => {
         if (!navbar.classList.contains('hidden')) {
             navbar.classList.add('hidden'); // Hide the navbar
         }
-    } else {
+    } else if (currentScrollTop < lastScrollTop) {
         // Scrolling up
         if (navbar.classList.contains('hidden')) {
             navbar.classList.remove('hidden'); // Show the navbar
         }
     }
 
-    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
+    lastScrollTop = currentScrollTop;
 });
 
 
@@ -834,6 +886,15 @@ dropdowns.forEach(dropdown => {
     dropdown.addEventListener('mouseleave', () => {
         mainContent.classList.remove('blur-content'); // Remove blur when not hovering
     });
+});
+
+        </script>
+        <script>
+            document.addEventListener('scroll', function() {
+    if (window.scrollY <= 0) {
+        // Disable any scroll events when at the top
+        window.scrollTo(0, 0);  // Prevent the page from scrolling up further
+    }
 });
 
         </script>

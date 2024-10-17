@@ -9,7 +9,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body class="text-white" style="background-color: black;">
+    <style>
+        html, body, main {
+            overflow: visible;
+        }
+    </style>
+
+    <body>
 
         <nav class="navbar navbar-expand-lg p-0">
             <a class="navbar-brand mx-3" href="index.html">
@@ -184,7 +190,7 @@
         <main>
             <div class="container-fluid faqs text-light mt-5 px-5">
             <h1 class="display-1 my-5">Frequently Asked Questions</h1>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h1">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
                         How are ProntoPay’s rates better than my bank?
@@ -196,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h2">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
                         Where are ProntoPay licenced to operate?
@@ -208,7 +214,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h3">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
                         How will my rates be chosen?
@@ -220,7 +226,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h4">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
                         How long does it take to open an account?
@@ -232,7 +238,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h5">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
                         How does my money get transferred/converted?
@@ -244,7 +250,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h6">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
                         Are my funds secure with ProntoPay?
@@ -256,7 +262,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h7">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
                         Why should I trust ProntoPay?
@@ -268,7 +274,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-flush m-3" id="faq-accordion">
+            <div class="accordion accordion-flush m-5 glow" id="faq-accordion">
                 <h2 class="accordion-header" id="faq-h8">
                     <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
                         Are there any hidden fees?
@@ -320,10 +326,16 @@ const navbar = document.querySelector('.navbar');
 scrollContainer.addEventListener('scroll', () => {
     let currentScrollTop = scrollContainer.scrollTop;
     let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+    
+    // Set a small threshold to ignore small scrolls (bounce effect)
+    const threshold = 100;
 
     // Prevent overscrolling at the top
-    if (currentScrollTop <= 0) {
-        scrollContainer.scrollTop = 0;
+    if (currentScrollTop <= threshold) {
+        scrollContainer.scrollTop = 0; // Force it to stay at the top
+        navbar.classList.remove('hidden'); // Ensure the navbar is visible
+        lastScrollTop = 0; // Reset scroll tracking
+        return;
     }
 
     // Prevent overscrolling at the bottom
@@ -337,14 +349,14 @@ scrollContainer.addEventListener('scroll', () => {
         if (!navbar.classList.contains('hidden')) {
             navbar.classList.add('hidden'); // Hide the navbar
         }
-    } else {
+    } else if (currentScrollTop < lastScrollTop) {
         // Scrolling up
         if (navbar.classList.contains('hidden')) {
             navbar.classList.remove('hidden'); // Show the navbar
         }
     }
 
-    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Prevent negative values
+    lastScrollTop = currentScrollTop;
 });
 
 
