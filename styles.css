@@ -450,3 +450,72 @@ a.pp-text-blue:active {
   .accordion-button:focus {
     box-shadow: none !important;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    height: 100%; /* Ensure the grid item takes full height */
+    position: relative; /* Position relative for absolute positioning of h3 */
+}
+
+.grid-item:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.grid-item img {
+    width: 60%; /* Set image width to 60% of the grid item */
+    max-height: 200px; /* Set a maximum height for the images */
+    object-fit: contain; /* Ensure the image fits within the set height without distortion */
+    margin-bottom: 10px; /* Add margin below the image for spacing */
+}
+
+.grid-item h3 {
+    position: absolute; /* Position the heading absolutely */
+    bottom: 10px; /* Align it at the bottom of the grid item */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    margin: 0; /* Remove any default margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Adjust to 1 column on very small screens */
+    }
+
+    .grid-item img {
+        width: 80%; /* Increase image width on smaller screens */
+    }
+    
+    .grid-item h3 {
+        font-size: 1rem; /* Decrease font size for smaller screens */
+    }
+}
+
+
+
+
+
