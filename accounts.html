@@ -11,7 +11,7 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-lg p-0">
+        <nav class="desktop navbar navbar-expand-lg p-0">
             <a class="navbar-brand mx-3" href="index.html">
                 <img src="images/ProntoPay Logo.png" style="height: 40px;">
             </a>
@@ -23,68 +23,90 @@
                 <!-- Dropdown Menu -->
                 <li class="nav-item">
                   <a class="nav-link" href="accounts.html">Accounts <span class="arrow">&gt;</span></a>
-                  <div class="full-width-dropdown">
-                    <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                        <h5 class="dropdown-item w-100 text-wrap">Open an account to process all your currency needs 50% cheaper than your current provider, guaranteed.</h5>
+                  <div class="full-width-dropdown"  style="text-wrap: wrap;">
+                    <!-- First Dropdown Column with an Image -->
+                    <div class="d-flex" style="width: 100%;">
+
+                        <!-- First Dropdown Column with an Image -->
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="accounts.html#account-new"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">Click here to find out more about our accounts!</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-multi">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/multi-currency flag.jpg">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Multi-currency Account</h5>
+                                    <p class="mb-0">Open a single account to transact in over 150 countries</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-europe">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/eu flag.webp">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Europe</h5>
+                                    <p class="mb-0">Open an account to expand your business in Europe</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-switzerland">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/swiss flag.webp">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Switzerland</h5>
+                                    <p class="mb-0">Open a Swiss account to receive CHF</p>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-uae">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/uae flag.jpg">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">United Arab Emirates</h5>
+                                    <p class="mb-0">Open an account for your real estate investments</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-uk">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/uk flag.png">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">United Kingdom</h5>
+                                    <p class="mb-0">Open a local UK account for all your GBP needs</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center flex-grow-1" href="accounts.html#account-us">
+                                <div class="me-3">
+                                    <img class="navbar-icon" src="images/flags/us flag.jpg">
+                                </div>
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">United States of America</h5>
+                                    <p class="mb-0">Open a USD account to have access to the world's strongest currency</p>
+                                </div>
+                            </a>
+                        </div>
+                    
                     </div>
-                    <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-multi">
-                            <div class="me-3">
-                                <img src="images/flags/multi-currency flag.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Multi-currency Account</h5>
-                                <p class="mb-0">Open a single account to transact in over 150 countries</p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-europe">
-                            <div class="me-3">
-                                <img src="images/flags/eu flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Europe</h5>
-                                <p class="mb-0">Open an account to expand your business in Europe</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center" href="accounts.html#account-switzerland">
-                            <div class="me-3">
-                                <img src="images/flags/swiss flag.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Switzerland</h5>
-                                <p class="mb-0">Open a Swiss account to receive CHF</p>
-                            </div>
-                        </a>   
-                    </div>
-                    <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-uae">
-                            <div class="me-3">
-                                <img src="images/flags/uae flag.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">United Arab Emirates</h5>
-                                <p class="mb-0">Open an account for your real estate investments</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-uk">
-                            <div class="me-3">
-                                <img src="images/flags/uk flag.png" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">United Kingdom</h5>
-                                <p class="mb-0">Open a local UK account for all your GBP needs</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center" href="accounts.html#account-us">
-                            <div class="me-3">
-                                <img src="images/flags/us flag.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                            </div>
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">United States of America</h5>
-                                <p class="mb-0">Open a USD account to have access to the world's strongest currency</p>
-                            </div>
-                        </a> 
-                    </div>
+                    
+
+                    
                   </div>
                 </li>
 
@@ -92,61 +114,87 @@
                 <li class="nav-item">
                     <a class="nav-link" href="industries.html">Industries <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                      <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                        <h5 class="dropdown-item w-100 text-wrap">Whether you are a start-up, raising funds for the first time, a 100+ year old business with regular payments or an investment management organisation, we can support your currency needs.</h5>
-                      </div>
-                      <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Family-Office</h5>
-                                <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
-                            </div>
-                        </a>                        
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Corporates</h5>
-                                <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
-                            </div>
-                        </a> 
-                      </div>
-                      <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Real Estate</h5>
-                                <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Personal</h5>
-                                <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
-                            </div>
-                        </a>
-                      </div>
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="accounts.html#account-new"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">Click here to find out more about our accounts!</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Family-Office</h5>
+                                    <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
+                                </div>
+                            </a>  
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Corporates</h5>
+                                    <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Real Estate</h5>
+                                    <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Personal</h5>
+                                    <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                   </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="partnerships.html">Partnerships <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                            <h5 class="dropdown-item w-100 text-wrap">Whether you run a business and have customers who may benefit from our services or personally have a network that would value our services, we are happy to support.</h5>
-                            </div>
-                            <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="accounts.html#account-new"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">Whether you run a business and have customers who may benefit from our services or personally have a network that would value our services, we are happy to support.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="partnerships.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Personal</h5>
                                     <p class="mb-0">Learn more about who we are and how we operate</p>
                                 </div>
-                            </a>
-                            </div>
-                            <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                            </a>  
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="partnerships.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Business</h5>
                                     <p class="mb-0">Have any questions about the platform and need troubleshooting? Click here!</p>
                                 </div>
-                            </a>
+                            </a> 
                         </div>
                     </div>
                 </li>
@@ -155,34 +203,106 @@
                 <li class="nav-item">
                     <a class="nav-link" href="faqs.html">FAQs <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                            <h5 class="dropdown-item w-100 text-wrap">At ProntoPay, we like to be transparent about our operating model, how we work and manage client expectations.</h5>
-                          </div>
-                          <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="faqs.html"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">At ProntoPay, we like to be transparent about our operating model, how we work and manage client expectations.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="faqs.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Prospective Clients</h5>
                                     <p class="mb-0">Learn more about who we are and how we operate</p>
                                 </div>
-                            </a>
-                          </div>
-                          <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                            </a>  
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="faqs.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Existing Clients</h5>
                                     <p class="mb-0">Have any questions about the platform and need troubleshooting? Click here!</p>
                                 </div>
-                            </a>
+                            </a> 
                         </div>
                     </div>
                   </li>
-
               </ul>
+
+              <div class="d-flex justify-content-end align-items-center mt-4 ms-auto"></div>
+                <div>
+                    <a class="pp-link m-0" href="">
+                        <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                            <p class="m-0" style="font-size: 0.8rem;">Login</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                        <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                            <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
+                        </div>
+                    </a>
+                </div>
+              </div>
             </div>
           </nav>
-           
+
+          <nav class="mobile navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-3" href="index.html">
+                    <img src="images/ProntoPay Logo.png" style="height: 40px;">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accounts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Industries</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Partnerships</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FAQs</a>
+                  </li>
+                  
+                  <div class="d-flex justify-content-end align-items-center mt-4 ms-auto">
+                  <div>
+                      <a class="pp-link m-0" href="">
+                          <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                              <p class="m-0" style="font-size: 0.8rem;">Login</p>
+                          </div>
+                      </a>
+                  </div>
+                  <div>
+                      <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                          <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                              <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
+                          </div>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
         <main class="scroll-container">
-            <div class="container-fluid snap-section accounts px-5 acc-ind-layout" style=" align-items: flex-start; height: 90vh;">
+            <div class="container-fluid snap-section accounts px-5 acc-ind-layout" style=" align-items: flex-start; height: 97vh;">
                 <h1 class="display-1" style="margin-bottom: 20px; text-align: left; width: 100%;">Accounts</h1> <!-- Adjust margin as needed -->
                 <div class="card text-left text-white" style="background-color: black; height: 80%; width: 100%; position: relative; display: flex; flex-direction: column;">
                     <img src="https://cdn.pixabay.com/photo/2019/09/16/06/26/fog-4479936_1280.jpg" 
@@ -193,27 +313,27 @@
                             <p class="display-6">Seamless global transactions. Access in over 150 countries.</p>
                         </div>
                         <div class="grid-container">
-                            <a href="your-link-1" class="grid-item">
-                                <img src="your-image-1.png" alt="Image 1">
+                            <a href="your-link-1" class="grid-item no-glow">
+                                <img src="images/flags/multi-currency flag.png" alt="Image 1">
                                 <h3>Multi-Currency</h3>
                             </a>
-                            <a href="your-link-2" class="grid-item">
-                                <img src="your-image-2.png" alt="Image 2">
+                            <a href="your-link-2" class="grid-item no-glow">
+                                <img src="images/flags/europe outline trans.png" alt="Image 2">
                                 <h3>Europe</h3>
                             </a>
-                            <a href="your-link-3" class="grid-item">
+                            <a href="your-link-3" class="grid-item no-glow">
                                 <img src="images/flags/swiss outline.png" alt="Image 3">
                                 <h3>Switzerland</h3>
                             </a>
-                            <a href="your-link-4" class="grid-item">
+                            <a href="your-link-4" class="grid-item no-glow">
                                 <img src="images/flags/uae outline.png" alt="Image 4">
                                 <h3>United Arab Emirates</h3>
                             </a>
-                            <a href="your-link-5" class="grid-item">
+                            <a href="your-link-5" class="grid-item no-glow">
                                 <img src="images/flags/uk outline.png" alt="Image 5">
                                 <h3>United Kingdom</h3>
                             </a>
-                            <a href="your-link-6" class="grid-item">
+                            <a href="your-link-6" class="grid-item no-glow">
                                 <img src="images/flags/us outline.png" alt="Image 6">
                                 <h3>United States</h3>
                             </a>
@@ -226,7 +346,7 @@
                 <div class="content-wrapper" style="width: 100%;  display: flex;">
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
                         <div class="image-container" style="width: 100%; height: 100%; display: flex; justify-content: center;">
-                            <img src="https://cdn.pixabay.com/photo/2021/08/23/07/40/dollar-6566982_1280.jpg" class="px-3" style="width: 100%; height: 100%; object-fit: cover; align-self: center;">
+                            <img src="images/multi-currency.webp" class="px-3" style="width: 100%; height: 100%; object-fit: cover; align-self: center;">
                         </div>
                     </div>
                     <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
@@ -250,7 +370,7 @@
                     </div>
                     <div class="col col-md-8 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
                         <div class="image-container">
-                            <img src="./images/europe.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="./images/europe-32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -260,7 +380,7 @@
                 <div class="row content-wrapper" style="width: 100%; display: flex;">
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
                         <div class="image-container">
-                            <img src="./images/switzerland-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="./images/switzerland-account-32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                     <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
@@ -294,7 +414,7 @@
                 <div class="row content-wrapper" style="width: 100%; display: flex;">
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
                         <div class="image-container">
-                            <img src="./images/uk-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="./images/uk-account-32.png" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                     <div class="col col-md-4 d-flex flex-column justify-content-center px-3 text-column" style="width: 40%;">
@@ -318,7 +438,7 @@
                     </div>
                     <div class="col col-md-8 p-0 d-flex justify-content-center align-items-center image-column" style="width: 60%; height: 100%; overflow: hidden;">
                         <div class="image-container">
-                            <img src="./images/usa-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="./images/usa-account-32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -422,97 +542,5 @@
         <script src="animation.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script>
-            let lastScrollTop = 0;
-const scrollContainer = document.querySelector('.scroll-container');
-const navbar = document.querySelector('.navbar');
-
-scrollContainer.addEventListener('scroll', () => {
-    let currentScrollTop = scrollContainer.scrollTop;
-    let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-    
-    // Set a small threshold to ignore small scrolls (bounce effect)
-    const threshold = 100;
-
-    // Prevent overscrolling at the top
-    if (currentScrollTop <= threshold) {
-        scrollContainer.scrollTop = 0; // Force it to stay at the top
-        navbar.classList.remove('hidden'); // Ensure the navbar is visible
-        lastScrollTop = 0; // Reset scroll tracking
-        return;
-    }
-
-    // Prevent overscrolling at the bottom
-    if (currentScrollTop >= maxScrollTop) {
-        scrollContainer.scrollTop = maxScrollTop;
-    }
-
-    // Handle navbar visibility based on scroll direction
-    if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
-        if (!navbar.classList.contains('hidden')) {
-            navbar.classList.add('hidden'); // Hide the navbar
-        }
-    } else if (currentScrollTop < lastScrollTop) {
-        // Scrolling up
-        if (navbar.classList.contains('hidden')) {
-            navbar.classList.remove('hidden'); // Show the navbar
-        }
-    }
-
-    lastScrollTop = currentScrollTop;
-});
-
-
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-    const statElements = document.querySelectorAll('.stat-value');
-
-    // Function to animate the count
-    function countUp(element, target, suffix) {
-        const startValue = parseInt(element.textContent, 10);
-        const endValue = parseInt(target, 10);
-        const duration = 2000; // Duration in milliseconds
-        const stepTime = 50;
-        const steps = duration / stepTime;
-        const increment = Math.abs(endValue - startValue) / steps;
-        const isCountdown = startValue > endValue;
-
-        let currentValue = startValue;
-        const interval = setInterval(() => {
-            currentValue += isCountdown ? -increment : increment;
-            if ((isCountdown && currentValue <= endValue) || (!isCountdown && currentValue >= endValue)) {
-                currentValue = endValue;
-                clearInterval(interval);
-            }
-            element.textContent = Math.floor(currentValue) + suffix;
-        }, stepTime);
-    }
-
-    // Function to handle the intersection observer
-    function handleIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target.getAttribute('data-target');
-                const suffix = entry.target.getAttribute('data-suffix');
-                countUp(entry.target, target, suffix);
-                observer.unobserve(entry.target);
-            }
-        });
-    }
-
-    // Create an intersection observer
-    const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.5 // Adjust this value to determine when the element is considered in view
-    });
-
-    // Observe each stat element
-    statElements.forEach(stat => {
-        observer.observe(stat);
-    });
-});
-
-        </script>
     </body>
 </html>

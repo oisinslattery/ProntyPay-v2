@@ -12,7 +12,7 @@
 
     <body>
     
-        <nav class="navbar navbar-expand-lg p-0">
+        <nav class="desktop navbar navbar-expand-lg p-0">
             <a class="navbar-brand mx-3" href="index.html">
                 <img src="images/ProntoPay Logo.png" style="height: 40px;">
             </a>
@@ -30,10 +30,10 @@
 
                         <!-- First Dropdown Column with an Image -->
                         <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="accounts.html#account-new">
-                                <div class="card text-white glow multi-card" style="background-color: transparent;">
-                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: auto;">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2;">
+                            <a class="d-flex align-items-center" href="accounts.html#account-new"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
                                         <div>
                                             <h5 class="heading-1 heading m-5">Click here to find out more about our accounts!</h5>
                                         </div>
@@ -115,68 +115,87 @@
                 <li class="nav-item">
                     <a class="nav-link" href="industries.html">Industries <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                      <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3">
-                        <div class="card text-white glow multi-card" style="background-color: transparent;">
-                            <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: auto;">
-                            <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2;">
-                                <div>
-                                    <h5 class="heading-1 heading p-3">Click here to find out more about our accounts!</h5>
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="accounts.html#account-new"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">Click here to find out more about our accounts!</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                      <div class="dropdown-column p-0">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Family-Office</h5>
-                                <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
-                            </div>
-                        </a>                        
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Corporates</h5>
-                                <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
-                            </div>
-                        </a> 
-                      </div>
-                      <div class="dropdown-column">
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Real Estate</h5>
-                                <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
-                            </div>
-                        </a> 
-                        <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
-                            <div class="text-start">
-                                <h5 class="mb-1 pp-text-blue">Personal</h5>
-                                <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
-                            </div>
-                        </a>
-                      </div>
+
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-family">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Family-Office</h5>
+                                    <p class="mb-0">Partner with ProntoPay to strategize on your fx requirements</p>
+                                </div>
+                            </a>  
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-corp">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Corporates</h5>
+                                    <p class="mb-0">Open a corporate account to benefit from better forward rates</p>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-rec">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Real Estate</h5>
+                                    <p class="mb-0">Purchase your property abroad and avoid the fx fees</p>
+                                </div>
+                            </a> 
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="industries.html#industries-personal">
+                                <div class="text-start">
+                                    <h5 class="mb-1 pp-text-blue">Personal</h5>
+                                    <p class="mb-0">Remit your funds abroad safely and securely, without the cost</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                   </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="partnerships.html">Partnerships <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                            <h5 class="dropdown-item w-100 text-wrap">Whether you run a business and have customers who may benefit from our services or personally have a network that would value our services, we are happy to support.</h5>
-                            </div>
-                            <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="accounts.html#account-new"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">Whether you run a business and have customers who may benefit from our services or personally have a network that would value our services, we are happy to support.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="partnerships.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Personal</h5>
                                     <p class="mb-0">Learn more about who we are and how we operate</p>
                                 </div>
-                            </a>
-                            </div>
-                            <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                            </a>  
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="partnerships.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Business</h5>
                                     <p class="mb-0">Have any questions about the platform and need troubleshooting? Click here!</p>
                                 </div>
-                            </a>
+                            </a> 
                         </div>
                     </div>
                 </li>
@@ -185,24 +204,37 @@
                 <li class="nav-item">
                     <a class="nav-link" href="faqs.html">FAQs <span class="arrow">&gt;</span></a>
                     <div class="full-width-dropdown">
-                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-5">
-                            <h5 class="dropdown-item w-100 text-wrap">At ProntoPay, we like to be transparent about our operating model, how we work and manage client expectations.</h5>
-                          </div>
-                          <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                        <div class="dropdown-column d-flex flex-column justify-content-center align-items-center text-center p-3" style="width: 33%;">
+                            <a class="d-flex align-items-center" href="faqs.html"style="width: 100%; height: 100%;">
+                                <div class="card text-white glow multi-card" style="background-color: transparent; width: 100%; height: 100%;">
+                                    <img class="multi-card-img" src="images/accounts-cover.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-center align-items-center text-center" style="z-index: 2; height: 100%">
+                                        <div>
+                                            <h5 class="heading-1 heading m-5">At ProntoPay, we like to be transparent about our operating model, how we work and manage client expectations.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Second Dropdown Column with Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="faqs.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Prospective Clients</h5>
                                     <p class="mb-0">Learn more about who we are and how we operate</p>
                                 </div>
-                            </a>
-                          </div>
-                          <div class="dropdown-column">
-                            <a class="dropdown-item d-flex align-items-center mb-4" href="#">
+                            </a>  
+                        </div>
+                    
+                        <!-- Third Dropdown Column with More Items -->
+                        <div class="dropdown-column d-flex flex-column justify-content-around" style="width: 33%;">
+                            <a class="dropdown-item d-flex align-items-center mb-4" href="faqs.html">
                                 <div class="text-start">
                                     <h5 class="mb-1 pp-text-blue">Existing Clients</h5>
                                     <p class="mb-0">Have any questions about the platform and need troubleshooting? Click here!</p>
                                 </div>
-                            </a>
+                            </a> 
                         </div>
                     </div>
                   </li>
@@ -225,6 +257,48 @@
                 </div>
               </div>
             </div>
+          </nav>
+
+          <nav class="mobile navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-3" href="index.html">
+                    <img src="images/ProntoPay Logo.png" style="height: 40px;">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accounts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Industries</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Partnerships</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FAQs</a>
+                  </li>
+                  
+                  <div class="d-flex justify-content-end align-items-center mt-4 ms-auto">
+                  <div>
+                      <a class="pp-link m-0" href="">
+                          <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                              <p class="m-0" style="font-size: 0.8rem;">Login</p>
+                          </div>
+                      </a>
+                  </div>
+                  <div>
+                      <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                          <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
+                              <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
+                          </div>
+                      </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </nav>
 
@@ -243,7 +317,7 @@
                             <img src="images/ProntoPay Logo.png" style="width: 15%;"/>
                         </a>
                         <h1 class="display-1" style="margin-top: 2%;">Payments Beyond Borders</h1>
-                        <div class="d-flex justify-content-center align-items-center mt-4">
+                        <div class="landing-buttons d-flex justify-content-center align-items-center">
                             <div class="m-2 p-1">
                                 <a class="pp-link m-2" href="">
                                     <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 200px;">
@@ -758,145 +832,5 @@
         <script src="animation.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script>
-            let lastScrollTop = 0;
-const scrollContainer = document.querySelector('.scroll-container');
-const navbar = document.querySelector('.navbar');
-
-scrollContainer.addEventListener('scroll', () => {
-    let currentScrollTop = scrollContainer.scrollTop;
-    let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-    
-    // Set a small threshold to ignore small scrolls (bounce effect)
-    const threshold = 250;
-
-    // Prevent overscrolling at the top
-    if (currentScrollTop <= threshold) {
-        scrollContainer.scrollTop = 0; // Force it to stay at the top
-        navbar.classList.remove('hidden'); // Ensure the navbar is visible
-        lastScrollTop = 0; // Reset scroll tracking
-        return;
-    }
-
-    // Prevent overscrolling at the bottom
-    if (currentScrollTop >= maxScrollTop) {
-        scrollContainer.scrollTop = maxScrollTop;
-    }
-
-    // Handle navbar visibility based on scroll direction
-    if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
-        if (!navbar.classList.contains('hidden')) {
-            navbar.classList.add('hidden'); // Hide the navbar
-        }
-    } else if (currentScrollTop < lastScrollTop) {
-        // Scrolling up
-        if (navbar.classList.contains('hidden')) {
-            navbar.classList.remove('hidden'); // Show the navbar
-        }
-    }
-
-    lastScrollTop = currentScrollTop;
-});
-
-
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-    const statElements = document.querySelectorAll('.stat-value');
-
-    // Function to animate the count
-    function countUp(element, target, suffix) {
-        const startValue = parseInt(element.textContent, 10);
-        const endValue = parseInt(target, 10);
-        const duration = 2000; // Duration in milliseconds
-        const stepTime = 50;
-        const steps = duration / stepTime;
-        const increment = Math.abs(endValue - startValue) / steps;
-        const isCountdown = startValue > endValue;
-
-        let currentValue = startValue;
-        const interval = setInterval(() => {
-            currentValue += isCountdown ? -increment : increment;
-            if ((isCountdown && currentValue <= endValue) || (!isCountdown && currentValue >= endValue)) {
-                currentValue = endValue;
-                clearInterval(interval);
-            }
-            element.textContent = Math.floor(currentValue) + suffix;
-        }, stepTime);
-    }
-
-    // Function to handle the intersection observer
-    function handleIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target.getAttribute('data-target');
-                const suffix = entry.target.getAttribute('data-suffix');
-                countUp(entry.target, target, suffix);
-                observer.unobserve(entry.target);
-            }
-        });
-    }
-
-    // Create an intersection observer
-    const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.5 // Adjust this value to determine when the element is considered in view
-    });
-
-    // Observe each stat element
-    statElements.forEach(stat => {
-        observer.observe(stat);
-    });
-});
-
-        </script>
-        <script>
-const mainContent = document.querySelector('main'); // Assuming <main> is the tag
-
-// Function to determine if the navbar is visible
-function isNavbarVisible() {
-    return !navbar.classList.contains('hidden'); // Adjust based on your hidden class
-}
-
-// Add event listeners for hover on navbar items
-const navItems = document.querySelectorAll('.nav-item');
-
-navItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        if (isNavbarVisible()) {
-            mainContent.classList.add('blur-content'); // Add blur on hover if navbar is visible
-        }
-    });
-
-    item.addEventListener('mouseleave', () => {
-        mainContent.classList.remove('blur-content'); // Remove blur when not hovering
-    });
-});
-
-// Also apply blur when dropdown is shown
-const dropdowns = document.querySelectorAll('.full-width-dropdown');
-
-dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('mouseenter', () => {
-        if (isNavbarVisible()) {
-            mainContent.classList.add('blur-content'); // Add blur when hovering over dropdown if navbar is visible
-        }
-    });
-
-    dropdown.addEventListener('mouseleave', () => {
-        mainContent.classList.remove('blur-content'); // Remove blur when not hovering
-    });
-});
-
-        </script>
-        <script>
-            document.addEventListener('scroll', function() {
-    if (window.scrollY <= 0) {
-        // Disable any scroll events when at the top
-        window.scrollTo(0, 0);  // Prevent the page from scrolling up further
-    }
-});
-
-        </script>
     </body>
 </html>

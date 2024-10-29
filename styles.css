@@ -10,8 +10,13 @@ html, body, main {
 body {
     overflow-y: hidden; /* Prevent default vertical scrolling */
     background-color: black !important;
-    color: white !important
+    color: white !important;
 }
+
+.mobile {
+    display: none !important;
+}
+
 .card {
     background-color: black !important;
 }
@@ -110,6 +115,7 @@ a.pp-text-blue:active {
 }
 
 .scroll-container {
+    display: block;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh; /* Full height for the scrollable container */
@@ -136,9 +142,9 @@ a.pp-text-blue:active {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
     .snap-section {
-        max-width: 1024px; /* Adjust max-width for smaller screens */
+        max-width: 800px; /* Adjust max-width for smaller screens */
     }
 }
 
@@ -219,8 +225,9 @@ a.pp-text-blue:active {
     display: flex;
     align-items: center;
     flex-grow: 1; /* Ensures all items have equal height */
-    padding: 10px; /* Adjust padding as needed */
+    padding: 10px !important; /* Adjust padding as needed */
     text-decoration: none;
+    height: 33%;
 }
 
 
@@ -279,6 +286,16 @@ a.pp-text-blue:active {
 }
 
 .glow:hover {
+    box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
+                0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread */
+}
+
+.no-glow {
+    box-shadow: 0 0 30px rgba(136, 203, 236, 0); /* No visible shadow initially */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.no-glow:hover {
     box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
                 0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread */
 }
@@ -370,7 +387,6 @@ a.pp-text-blue:active {
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    min-height: 300px;
 }
 
 .image-container {
@@ -494,10 +510,42 @@ a.pp-text-blue:active {
     margin: 0; /* Remove any default margin */
 }
 
+.landing-buttons {
+    margin-top: 24px;
+}
+
+.general-info {
+    display: flex;                /* d-flex */
+    flex-direction: column;      /* flex-column */
+    justify-content: center;      /* justify-content-center */
+    align-items: center;          /* align-items-center */
+    padding-top: 1rem;           /* py-3 (assuming a 1rem padding for top and bottom) */
+    padding-bottom: 1rem;        /* py-3 */
+    text-align: center;           /* text-center */
+}
+
+.mobile-container {
+    overflow: auto;  /* Allows scrolling */
+    height: 100vh;   /* Ensure the container height is sufficient */
+    /* Other styles as necessary */
+}
+
+.mobile-section {
+    width: 100vw;
+    min-width: 0px;
+    max-width: 480px;
+    background-color: black; /* Adjust as needed */
+    color: white; /* Adjust as needed */
+    display: flex; 
+    flex-direction: column;
+    padding: 0 !important;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 co
+        lumns on smaller screens */
     }
 }
 
@@ -512,6 +560,39 @@ a.pp-text-blue:active {
     
     .grid-item h3 {
         font-size: 1rem; /* Decrease font size for smaller screens */
+    }
+
+    .mobile-container {
+        display: block !important
+    }
+
+    .scroll-container{
+        display: none !important
+    }
+
+    .landing-buttons {
+        flex-direction: column !important; /* Stack divs vertically */
+        margin: 0 !important; /* Remove default margin */
+    }
+
+    .landing-buttons > div {
+        width: 100%; /* Optional: makes each button fill the container width */
+        text-align: center; /* Center aligns content inside each button */
+    }
+    
+    .landing-buttons div {
+        margin: 0px 0 !important; /* Add space between buttons */
+        padding: 0 !important; /* Remove padding */
+        height: 50px !important;
+    }
+
+    .pp-link img {
+        height: 15vh;
+        width: auto;
+    }
+
+    .currency-info img{
+        width: 1rem;
     }
 }
 
