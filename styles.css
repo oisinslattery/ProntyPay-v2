@@ -570,6 +570,10 @@ a.pp-text-blue:active {
         display: none !important
     }
 
+    .desktop-container{
+        display: none !important
+    }
+
     .landing-buttons {
         flex-direction: column !important; /* Stack divs vertically */
         margin: 0 !important; /* Remove default margin */

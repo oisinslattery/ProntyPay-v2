@@ -307,77 +307,155 @@
           </nav>
 
         <main>
-                <div class="container-fluid">
-                    <div class="px-5 mb-5" style="flex: 0 0 20%; display: flex; flex-direction: column; justify-content: center;">
-                        <h1 class="display-1" style="font-size: 3rem;">Partnerships</h1>
-                        <p class="lead mt-3" style="font-size: 1.5rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="desktop-container">
+                    <div class="container-fluid">
+                        <div class="px-5 mb-5" style="flex: 0 0 20%; display: flex; flex-direction: column; justify-content: center;">
+                            <h1 class="display-1" style="font-size: 3rem;">Partnerships</h1>
+                            <p class="lead mt-3" style="font-size: 1.5rem;">We have partnered businesses and individuals who prefer the ProntoPay solution to others. Click below to learn more.</p>
+                        </div>
+                        <div class="row justify-content-center w-100 position-relative">
+                            <!-- First card -->
+                            <div class="col-6 d-flex justify-content-center mb-4 card-container" style="max-width: 800px; min-width: 450px;">
+                                <div class="clickable card text-white first-card" id="info-individuals" style="background-color: transparent; position: relative;">
+                                    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696229_1280.jpg" style="opacity: 0.5; min-width: 450px; width: 35vw; height: 60vh; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-start align-items-end p-0" style="z-index: 2;">
+                                        <h5 class="w-100 bg-primary text-white text-left p-4 m-0">For Individuals</h5>
+                                    </div>
+                                </div>
+                    
+                                <!-- First card replacement -->
+                                <div class="replacement hidden" id="first-replacement" style="display: none; max-width: 800px; min-width: 450px; padding:0">
+                                    <div class="text-white px-4">
+                                        <button class="close-btn" onclick="closeInfo('first')">X</button>
+                                        <h5>More Info for Businesses</h5>
+                                        <p>Unlock a new revenue stream and enhance your client relationships with ProntoPay's referral program. By partnering with us, you can offer your clients access to comprehensive FX solutions while earning commissions on every transaction referred. Whether you prefer a hands-on approach or simply share contacts with us, our team ensures a seamless experience from initial contact to transaction completion.<br><br> With ProntoPay, you can monetize your network like never before. Even secondary referrals generated from your client base contribute to your earnings, creating a sustainable source of passive income. Join forces with ProntoPay and empower your clients with value-added services while maximizing your revenue potential.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Second card -->
+                            <div class="col-6 d-flex justify-content-center mb-4 card-container" style="max-width: 800px; min-width: 450px;">
+                                <div class="clickable card text-white second-card"  id="info-businesses" style="background-color: transparent; position: relative;">
+                                    <img src="https://cdn.pixabay.com/photo/2020/02/18/08/35/finance-4858797_1280.jpg" style="opacity: 0.5; min-width: 450px;  width: 35vw; height: 60vh; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-start align-items-end p-0" style="z-index: 2;">
+                                        <h5 class="w-100 bg-primary text-white text-left p-4 m-0">For Businesses</h5>
+                                    </div>
+                                </div>
+                    
+                                <!-- Second card replacement -->
+                                <div class="replacement hidden" id="second-replacement" style="display: none; max-width: 800px;min-width: 450px; padding: 0;">
+                                    <div class="text-white px-4">
+                                        <button class="close-btn" onclick="closeInfo('second')">X</button>
+                                        <h5>More Info for Individuals</h5>
+                                        <p>Are you passionate about connecting people with valuable solutions? With ProntoPay, you can turn your network into a source of passive income while providing real value to those you care about. Simply share a contact on WhatsApp, and our team will take care of the rest. From fact-finding to onboarding and transactions, we handle the entire process with expertise and professionalism. <br><br>
+                                            By referring your contacts to ProntoPay, you not only help them access seamless FX solutions but also earn commissions on every transaction. What's more, our referral program goes beyond the initial contact – even secondary referrals generated from your network continue to earn you commissions. Join us in revolutionizing global transactions while earning rewards for your valuable connections.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row justify-content-center w-100 position-relative">
-                        <!-- First card -->
-                        <div class="col-6 d-flex justify-content-center mb-4 card-container" style="max-width: 800px; min-width: 450px;">
-                            <div class="clickable card text-white first-card" id="info-individuals" style="background-color: transparent; position: relative;">
-                                <img src="https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696229_1280.jpg" style="opacity: 0.5; min-width: 450px; width: 35vw; height: 60vh; object-fit: cover;">
-                                <div class="card-img-overlay d-flex justify-content-start align-items-end p-0" style="z-index: 2;">
-                                    <h5 class="w-100 bg-primary text-white text-left p-4 m-0">For Individuals</h5>
-                                </div>
-                            </div>
-                
-                            <!-- First card replacement -->
-                            <div class="replacement hidden" id="first-replacement" style="display: none; max-width: 800px; min-width: 450px; padding:0">
-                                <div class="text-white px-4">
-                                    <button class="close-btn" onclick="closeInfo('first')">X</button>
-                                    <h5>More Info for Businesses</h5>
-                                    <p>Unlock a new revenue stream and enhance your client relationships with ProntoPay's referral program. By partnering with us, you can offer your clients access to comprehensive FX solutions while earning commissions on every transaction referred. Whether you prefer a hands-on approach or simply share contacts with us, our team ensures a seamless experience from initial contact to transaction completion.<br><br> With ProntoPay, you can monetize your network like never before. Even secondary referrals generated from your client base contribute to your earnings, creating a sustainable source of passive income. Join forces with ProntoPay and empower your clients with value-added services while maximizing your revenue potential.</p>
-                                </div>
-                            </div>
+                    
+                    
+                    <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 py-3 text-center">
+                        <h4 class="text-white my-2">ProntoPay</h4>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img src="images/facebook.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="images/twitter.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
+                            </a>
                         </div>
-                
-                        <!-- Second card -->
-                        <div class="col-6 d-flex justify-content-center mb-4 card-container" style="max-width: 800px; min-width: 450px;">
-                            <div class="clickable card text-white second-card"  id="info-businesses" style="background-color: transparent; position: relative;">
-                                <img src="https://cdn.pixabay.com/photo/2020/02/18/08/35/finance-4858797_1280.jpg" style="opacity: 0.5; min-width: 450px;  width: 35vw; height: 60vh; object-fit: cover;">
-                                <div class="card-img-overlay d-flex justify-content-start align-items-end p-0" style="z-index: 2;">
-                                    <h5 class="w-100 bg-primary text-white text-left p-4 m-0">For Businesses</h5>
-                                </div>
-                            </div>
-                
-                            <!-- Second card replacement -->
-                            <div class="replacement hidden" id="second-replacement" style="display: none; max-width: 800px;min-width: 450px; padding: 0;">
-                                <div class="text-white px-4">
-                                    <button class="close-btn" onclick="closeInfo('second')">X</button>
-                                    <h5>More Info for Individuals</h5>
-                                    <p>Are you passionate about connecting people with valuable solutions? With ProntoPay, you can turn your network into a source of passive income while providing real value to those you care about. Simply share a contact on WhatsApp, and our team will take care of the rest. From fact-finding to onboarding and transactions, we handle the entire process with expertise and professionalism. <br><br>
-                                        By referring your contacts to ProntoPay, you not only help them access seamless FX solutions but also earn commissions on every transaction. What's more, our referral program goes beyond the initial contact – even secondary referrals generated from your network continue to earn you commissions. Join us in revolutionizing global transactions while earning rewards for your valuable connections.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            ProntoPay Ltd is a trading name of ProntoPay which is a company registered in England and Wales Company No.15091950 with a registered address of 19 Maritime StreetLondon, England, SE16 7FU.
+                        </p>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            Payment Services are provided by Equals Connect Limited, registered in England and Wales (registered no. 07131446). Registered Office: Vintners’ Place, 68 Upper Thames St, London, EC4V 3BJ. Equals Connect Limited are authorised by the Financial Conduct Authority to provide payment services (FRN: 671508).​
+                        </p>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            ProntoPay's payment and foreign currency exchange services are provided by Global Currency Exchange Network Ltd T/A GC Partners. Global Currency Exchange Network Ltd is authorised by the FCA under the Payment Services Regulations, 2017 (FRN: 504346). Registered as a Money Services Business, regulated by HM Revenue & Customs ("HMRC") under the Money Laundering Regulations 2017. (Registration number is 12137189). Registered in England and Wales. Company number 04675786. Registered Office 3rd Floor 100 New Bond Street, London, England, W1S 1SP
+                        </p>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            ProntoPay is partnered with iBanFirst SA, a duly authorised payment institution under Belgian law, regulated by the National Bank of Belgium (under CBE number 0849.872.824), who is providing the payment and associated foreign exchange services to ProntoPay’s customers.
+                        </p>
                     </div>
                 </div>
                 
-                
-                <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 py-3 text-center">
-                    <h4 class="text-white my-2">ProntoPay</h4>
-                    <div>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img src="images/facebook.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
-                        </a>
-                        <a href="https://x.com/" target="_blank">
-                            <img src="images/twitter.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
-                        </a>
+
+                <div class="mobile-container">
+                    <div class="container-fluid">
+                        <div class="px-5 mb-5" style="flex: 0 0 20%; display: flex; flex-direction: column; justify-content: center;">
+                            <h1 class="display-1" style="font-size: 3rem;">Partnerships</h1>
+                            <p class="lead mt-3" style="font-size: 1.5rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="row justify-content-center w-100 position-relative">
+                            <!-- First card -->
+                            <div class="col-6 d-flex justify-content-center mb-4 card-container" style="max-width: 800px; min-width: 450px;">
+                                <div class="clickable card text-white first-card" id="info-individuals" style="background-color: transparent; position: relative;">
+                                    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696229_1280.jpg" style="opacity: 0.5; min-width: 450px; width: 35vw; height: 60vh; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-start align-items-end p-0" style="z-index: 2;">
+                                        <h5 class="w-100 bg-primary text-white text-left p-4 m-0">For Individuals</h5>
+                                    </div>
+                                </div>
+                    
+                                <!-- First card replacement -->
+                                <div class="replacement hidden" id="first-replacement" style="display: none; max-width: 800px; min-width: 450px; padding:0">
+                                    <div class="text-white px-4">
+                                        <button class="close-btn" onclick="closeInfo('first')">X</button>
+                                        <h5>More Info for Businesses</h5>
+                                        <p>Unlock a new revenue stream and enhance your client relationships with ProntoPay's referral program. By partnering with us, you can offer your clients access to comprehensive FX solutions while earning commissions on every transaction referred. Whether you prefer a hands-on approach or simply share contacts with us, our team ensures a seamless experience from initial contact to transaction completion.<br><br> With ProntoPay, you can monetize your network like never before. Even secondary referrals generated from your client base contribute to your earnings, creating a sustainable source of passive income. Join forces with ProntoPay and empower your clients with value-added services while maximizing your revenue potential.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Second card -->
+                            <div class="col-6 d-flex justify-content-center mb-4 card-container" style="max-width: 800px; min-width: 450px;">
+                                <div class="clickable card text-white second-card"  id="info-businesses" style="background-color: transparent; position: relative;">
+                                    <img src="https://cdn.pixabay.com/photo/2020/02/18/08/35/finance-4858797_1280.jpg" style="opacity: 0.5; min-width: 450px;  width: 35vw; height: 60vh; object-fit: cover;">
+                                    <div class="card-img-overlay d-flex justify-content-start align-items-end p-0" style="z-index: 2;">
+                                        <h5 class="w-100 bg-primary text-white text-left p-4 m-0">For Businesses</h5>
+                                    </div>
+                                </div>
+                    
+                                <!-- Second card replacement -->
+                                <div class="replacement hidden" id="second-replacement" style="display: none; max-width: 800px;min-width: 450px; padding: 0;">
+                                    <div class="text-white px-4">
+                                        <button class="close-btn" onclick="closeInfo('second')">X</button>
+                                        <h5>More Info for Individuals</h5>
+                                        <p>Are you passionate about connecting people with valuable solutions? With ProntoPay, you can turn your network into a source of passive income while providing real value to those you care about. Simply share a contact on WhatsApp, and our team will take care of the rest. From fact-finding to onboarding and transactions, we handle the entire process with expertise and professionalism. <br><br>
+                                            By referring your contacts to ProntoPay, you not only help them access seamless FX solutions but also earn commissions on every transaction. What's more, our referral program goes beyond the initial contact – even secondary referrals generated from your network continue to earn you commissions. Join us in revolutionizing global transactions while earning rewards for your valuable connections.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-white my-2" style="font-size: 0.8rem;">
-                        ProntoPay Ltd is a trading name of ProntoPay which is a company registered in England and Wales Company No.15091950 with a registered address of 19 Maritime StreetLondon, England, SE16 7FU.
-                    </p>
-                    <p class="text-white my-2" style="font-size: 0.8rem;">
-                        Payment Services are provided by Equals Connect Limited, registered in England and Wales (registered no. 07131446). Registered Office: Vintners’ Place, 68 Upper Thames St, London, EC4V 3BJ. Equals Connect Limited are authorised by the Financial Conduct Authority to provide payment services (FRN: 671508).​
-                    </p>
-                    <p class="text-white my-2" style="font-size: 0.8rem;">
-                        ProntoPay's payment and foreign currency exchange services are provided by Global Currency Exchange Network Ltd T/A GC Partners. Global Currency Exchange Network Ltd is authorised by the FCA under the Payment Services Regulations, 2017 (FRN: 504346). Registered as a Money Services Business, regulated by HM Revenue & Customs ("HMRC") under the Money Laundering Regulations 2017. (Registration number is 12137189). Registered in England and Wales. Company number 04675786. Registered Office 3rd Floor 100 New Bond Street, London, England, W1S 1SP
-                    </p>
-                    <p class="text-white my-2" style="font-size: 0.8rem;">
-                        ProntoPay is partnered with iBanFirst SA, a duly authorised payment institution under Belgian law, regulated by the National Bank of Belgium (under CBE number 0849.872.824), who is providing the payment and associated foreign exchange services to ProntoPay’s customers.
-                    </p>
+                    
+                    
+                    <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 py-3 text-center">
+                        <h4 class="text-white my-2">ProntoPay</h4>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img src="images/facebook.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="images/twitter.png" class="img-fluid" style="height: 40px; margin: 10px;"/>
+                            </a>
+                        </div>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            ProntoPay Ltd is a trading name of ProntoPay which is a company registered in England and Wales Company No.15091950 with a registered address of 19 Maritime StreetLondon, England, SE16 7FU.
+                        </p>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            Payment Services are provided by Equals Connect Limited, registered in England and Wales (registered no. 07131446). Registered Office: Vintners’ Place, 68 Upper Thames St, London, EC4V 3BJ. Equals Connect Limited are authorised by the Financial Conduct Authority to provide payment services (FRN: 671508).​
+                        </p>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            ProntoPay's payment and foreign currency exchange services are provided by Global Currency Exchange Network Ltd T/A GC Partners. Global Currency Exchange Network Ltd is authorised by the FCA under the Payment Services Regulations, 2017 (FRN: 504346). Registered as a Money Services Business, regulated by HM Revenue & Customs ("HMRC") under the Money Laundering Regulations 2017. (Registration number is 12137189). Registered in England and Wales. Company number 04675786. Registered Office 3rd Floor 100 New Bond Street, London, England, W1S 1SP
+                        </p>
+                        <p class="text-white my-2" style="font-size: 0.8rem;">
+                            ProntoPay is partnered with iBanFirst SA, a duly authorised payment institution under Belgian law, regulated by the National Bank of Belgium (under CBE number 0849.872.824), who is providing the payment and associated foreign exchange services to ProntoPay’s customers.
+                        </p>
+                    </div>
                 </div>
         </main>
         
