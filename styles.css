@@ -227,7 +227,8 @@ a.pp-text-blue:active {
     flex-grow: 1; /* Ensures all items have equal height */
     padding: 10px !important; /* Adjust padding as needed */
     text-decoration: none;
-    height: 33%;
+    box-shadow: 0 0 0 rgba(136, 203, 236, 0.6); /* Initial light glow */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
 }
 
 
@@ -301,10 +302,8 @@ a.pp-text-blue:active {
 }
 
 .dropdown-item:hover {
-    box-shadow: 
-                0 0 30px rgba(136, 203, 236, 1), /* Stronger outer glow */
-                0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread outer glow */
-    background-color: rgba(136, 203, 236, 0.6);
+    box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
+                0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread */
 }
 
 .pp-button {
@@ -600,7 +599,79 @@ a.pp-text-blue:active {
     }
 }
 
+/* Ensure the carousel container is relative for correct positioning */
+.carousel {
+    position: relative; /* Make carousel the positioning context for indicators */
+}
+
+/* Consistent carousel image height */
+.carousel-img {
+    height: 33vh; /* One-third of the viewport height */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Crop the image without distortion */
+    object-position: center; /* Center the cropped area */
+}
+
+/* Position indicators at the bottom */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px; /* Place at the bottom of the carousel */
+    left: 50%; /* Center the indicators horizontally */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Add spacing between dots */
+    z-index: 10; /* Ensure indicators appear on top */
+}
+
+/* Style the indicators (optional for better visibility) */
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6c757d; /* Default color */
+    border: none;
+    opacity: 0.7; /* Slightly transparent */
+    transition: opacity 0.3s;
+}
+
+.carousel-indicators button.active {
+    background-color: #000; /* Active indicator color */
+    opacity: 1; /* Fully visible */
+}
+
+/* Default state: hidden */
+.mobile-replacement {
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Visible state: active */
+.mobile-replacement.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Arrow styling */
+.arrow {
+    float: right;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
 
 
+/* Style for mobile-card */
+.mobile-card {
+    background-color: transparent;
+    position: relative;
+}
 
-
+/* Overlay styles for mobile-card */
+.mobile-card .card-img-overlay {
+    z-index: 2;
+    position: absolute;
+}

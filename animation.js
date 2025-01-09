@@ -139,3 +139,28 @@ dropdowns.forEach(dropdown => {
 
 // --------------------------------------------
 
+function expandInfo(card) {
+    // Get the replacement div and arrow for the specified card
+    const replacement = document.getElementById(`${card}-replacement`);
+    const arrow = document.getElementById(`arrow-${card}`);
+
+    // If the replacement div is already visible, hide it
+    if (replacement.style.display === 'block') {
+        replacement.style.display = 'none';
+        replacement.classList.remove('active');
+        arrow.classList.add('d-none'); // Hide the arrow
+    } else {
+        // Hide all other replacements and reset arrows
+        document.querySelectorAll('.mobile-replacement').forEach((el) => {
+            el.style.display = 'none';
+            el.classList.remove('active');
+        });
+        document.querySelectorAll('.arrow').forEach((el) => el.classList.add('d-none'));
+
+        // Show the current replacement div
+        replacement.style.display = 'block';
+        replacement.classList.add('active');
+        arrow.classList.remove('d-none'); // Show the arrow
+    }
+}
+
