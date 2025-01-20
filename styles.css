@@ -130,7 +130,7 @@ a.pp-text-blue:active {
 
 .snap-section {
     scroll-snap-align: start;
-    height: 100vh; /* Full height for sections that need snapping */
+    height: 97vh; /* Full height for sections that need snapping */
     width: 100vw;
     min-width: 1024px;
     max-width: 1600px;
@@ -224,7 +224,7 @@ a.pp-text-blue:active {
 .dropdown-item {
     display: flex;
     align-items: center;
-    flex-grow: 1; /* Ensures all items have equal height */
+    height: 33%;
     padding: 10px !important; /* Adjust padding as needed */
     text-decoration: none;
     box-shadow: 0 0 0 rgba(136, 203, 236, 0.6); /* Initial light glow */
@@ -415,10 +415,6 @@ a.pp-text-blue:active {
 
 .replacement {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 3;
     background-color: black;
     color: white;
@@ -612,32 +608,22 @@ a.pp-text-blue:active {
     }
 }
 
-/* Ensure the carousel container is relative for correct positioning */
+/* Ensure the carousel container remains relative */
 .carousel {
-    position: relative; /* Make carousel the positioning context for indicators */
+    position: relative; /* Maintain relative positioning for other elements */
+    padding-bottom: 40px; /* Add space below the carousel for indicators */
 }
 
-/* Consistent carousel image height */
-.carousel-img {
-    height: 33vh; /* One-third of the viewport height */
-    width: 100%; /* Full width */
-    object-fit: cover; /* Crop the image without distortion */
-    object-position: center; /* Center the cropped area */
-}
-
-/* Position indicators at the bottom */
+/* Adjust carousel indicators to position below the carousel */
 .carousel-indicators {
-    position: absolute;
-    bottom: 10px; /* Place at the bottom of the carousel */
-    left: 50%; /* Center the indicators horizontally */
-    transform: translateX(-50%);
+    position: static; /* Remove absolute positioning */
+    margin-top: 10px; /* Add spacing above the indicators */
     display: flex;
     justify-content: center;
-    gap: 8px; /* Add spacing between dots */
-    z-index: 10; /* Ensure indicators appear on top */
+    gap: 8px; /* Add spacing between the dots */
 }
 
-/* Style the indicators (optional for better visibility) */
+/* Style the indicators for better visibility */
 .carousel-indicators button {
     width: 10px;
     height: 10px;
@@ -649,9 +635,10 @@ a.pp-text-blue:active {
 }
 
 .carousel-indicators button.active {
-    background-color: #000; /* Active indicator color */
+    background-color: rgb(136, 203, 236); /* Active indicator color */
     opacity: 1; /* Fully visible */
 }
+
 
 /* Default state: hidden */
 .mobile-replacement {
