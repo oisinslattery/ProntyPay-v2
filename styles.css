@@ -524,6 +524,7 @@ a.pp-text-blue:active {
 }
 
 .mobile-container {
+    display: none;
     overflow: auto;  /* Allows scrolling */
     height: 100vh;   /* Ensure the container height is sufficient */
     /* Other styles as necessary */
@@ -550,16 +551,29 @@ a.pp-text-blue:active {
 
 @media (max-width: 480px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Adjust to 1 column on very small screens */
+        display: grid; /* Ensure Grid layout is enabled */
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-auto-rows: 1fr; /* Make rows have equal height */
+        gap: 16px; /* Add spacing between items if needed */
+        height: 100%; /* Maintain full container height */
     }
-
+    
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Centers content within each grid item */
+        text-align: center; /* Aligns text */
+    }
+    
     .grid-item img {
-        width: 80%; /* Increase image width on smaller screens */
+        width: 40%; /* Image width */
     }
     
     .grid-item h3 {
-        font-size: 1rem; /* Decrease font size for smaller screens */
+        font-size: 1rem; /* Font size for h3 */
     }
+    
 
     .mobile-container {
         display: block !important
@@ -575,7 +589,6 @@ a.pp-text-blue:active {
 
     .landing-buttons {
         flex-direction: column !important; /* Stack divs vertically */
-        margin: 0 !important; /* Remove default margin */
     }
 
     .landing-buttons > div {
@@ -584,7 +597,7 @@ a.pp-text-blue:active {
     }
     
     .landing-buttons div {
-        margin: 0px 0 !important; /* Add space between buttons */
+        margin: 10px 0 !important; /* Add space between buttons */
         padding: 0 !important; /* Remove padding */
         height: 50px !important;
     }
@@ -656,7 +669,7 @@ a.pp-text-blue:active {
 }
 
 /* Arrow styling */
-.arrow {
+.partner-arrow {
     float: right;
     font-size: 1.5rem;
     color: white;
@@ -674,4 +687,41 @@ a.pp-text-blue:active {
 .mobile-card .card-img-overlay {
     z-index: 2;
     position: absolute;
+}
+
+.vid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.vid-container h2 {
+    margin-bottom: 20px; /* Space between the heading and the iframe */
+}
+
+.vid-container iframe {
+    width: 70%; /* 70% of the screen width */
+    height: calc(70vw / 1.7); /* Calculate height based on the 1.7 aspect ratio */
+    max-width: 1200px; /* Optional: Limit the maximum width of the iframe */
+    max-height: calc(1200px / 1.7); /* Limit the maximum height of the iframe */
+    border: none; /* Remove default border */
+}
+
+.vid-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Smaller padding for mobile */
+}
+
+.vid-container-mobile iframe {
+    width: 95%; /* Almost full width of the screen */
+    height: calc(95vw / 1.7); /* Maintain 1.7 aspect ratio */
+    max-width: none; /* Remove max-width restriction for mobile */
+    border: none; /* Remove default border */
 }
