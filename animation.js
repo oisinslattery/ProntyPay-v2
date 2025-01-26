@@ -47,6 +47,7 @@ navbar.classList.remove('hidden'); // Show the navbar
 }
 
 lastScrollTop = currentScrollTop;
+console.log(currentScrollTop, lastScrollTop)
 });
 
 // --------------------------------------------
@@ -163,4 +164,8 @@ function expandInfo(card) {
         arrow.classList.remove('d-none'); // Show the arrow
     }
 }
+
+// -------------------------------------------------
+
+// Select all blue banners within the structure
 

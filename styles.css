@@ -130,7 +130,7 @@ a.pp-text-blue:active {
 
 .snap-section {
     scroll-snap-align: start;
-    height: 97vh; /* Full height for sections that need snapping */
+    height: 100vh; /* Full height for sections that need snapping */
     width: 100vw;
     min-width: 1024px;
     max-width: 1600px;
@@ -299,6 +299,33 @@ a.pp-text-blue:active {
 .no-glow:hover {
     box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
                 0 0 60px rgba(136, 203, 236, 0.8); /* Brighter, more spread */
+}
+
+.no-glow-partner {
+    position: relative;
+    background: none; /* No glow effect initially */
+    color: transparent; /* Text is transparent initially */
+    text-align: center; /* Center the text */
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* No glow initially */
+    color: rgb(136, 203, 236);
+}
+
+.no-glow-partner:hover {
+    border: solid rgb(136, 203, 236);
+    color: white;
+    min-width: 100px;
+    margin: 8px;
+    padding: 4px;
+    color: white; /* White text when hovered */
+    padding: 0 10px;
+    background-color: rgb(136, 203, 236);
+    min-width: 100px;
+    box-shadow: 
+        0 0 20px rgba(136, 203, 236, 0.6),  /* Strong inner glow */
+        0 0 40px rgba(136, 203, 236, 0.4),  /* Mid glow layer */
+        0 0 80px rgba(136, 203, 236, 0.2),  /* Outer glow */
+        0 0 120px rgba(136, 203, 236, 0.1); /* Faintest, farthest glow */
 }
 
 .dropdown-item:hover {
@@ -712,3 +739,93 @@ a.pp-text-blue:active {
     max-width: none; /* Remove max-width restriction for mobile */
     border: none; /* Remove default border */
 }
+
+.landing-main,
+.landing-login {
+    position: absolute; /* Stack both elements */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Center transform */
+    width: 100%; /* Ensure full width */
+    text-align: center;
+    opacity: 1; /* Default visibility */
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Smooth animation */
+}
+
+/* Landing login is initially hidden below */
+.landing-login {
+    opacity: 0;
+    transform: translate(-50%, 100%); /* Start off-screen */
+}
+
+/* When show-login class is added */
+.show-login .landing-main {
+    opacity: 0; /* Fade out */
+    transform: translate(-50%, -100%); /* Slide up and out of view */
+}
+
+.show-login .landing-login {
+    opacity: 1; /* Fade in */
+    transform: translate(-50%, -50%); /* Move into the centered position */
+}
+
+.partner-image-container {
+    position: relative;
+    width: 90vw;
+    height: 90vw;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.partner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.partner-blue-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    height: 50px; /* Original height */
+    overflow: hidden;
+}
+
+.partner-blue-banner h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.partner-blue-banner .info {
+    opacity: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+    transition: opacity 0.3s ease-in-out;
+    display: block; /* Ensure it is not 'none' */
+}
+
+.partner-blue-banner.expanded {
+    height: 100%; /* Full height to cover the image */
+}
+
+.partner-blue-banner.expanded .info {
+    opacity: 1; /* Show the information text */
+}
+
+.partner-blue-banner.expanded h3 {
+    display: none;
+}
+
+

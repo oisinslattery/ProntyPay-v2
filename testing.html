@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerships Banner</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .partner-image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        .partner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .partner-blue-banner {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            height: 50px; /* Original height */
+            overflow: hidden;
+        }
+
+        .partner-blue-banner h3 {
+            margin: 0;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .partner-blue-banner .info {
+            opacity: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 10px 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .partner-blue-banner.expanded {
+            height: 100%; /* Full height to cover the image */
+        }
+
+        .partner-blue-banner.expanded .info {
+            opacity: 1; /* Show the information text */
+        }
+
+        .partner-blue-banner.expanded h3 {
+            opacity: 0; /* Hide the heading text */
+        }
+    </style>
+</head>
+<body>
+    <div class="partner-image-container">
+        <img src="https://via.placeholder.com/300x200" alt="Sample Image" class="partner-image">
+        <div class="partner-blue-banner">
+            <h3 class="heading">Tap to Learn More</h3>
+            <p class="info hidden">Here is some detailed information about the image. Tap again to close.</p>
+        </div>
+    </div>
+
+    <script>
+        // Select all blue banners within the page
+        document.querySelectorAll('.partner-blue-banner').forEach((blueBanner) => {
+            blueBanner.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent bubbling to parent containers
+                blueBanner.classList.toggle('expanded'); // Toggle the expanded class
+            });
+        });
+    </script>
+</body>
+</html>
