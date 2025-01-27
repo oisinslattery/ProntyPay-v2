@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav">
                     <!-- Dropdown Menu -->
-                    <li class="nav-item">
+                    <li class="nav-item nav-item-hide">
                       <a class="nav-link" href="accounts.html">Accounts <span class="arrow">&gt;</span></a>
                       <div class="full-width-dropdown"  style="text-wrap: wrap;">
                         <!-- First Dropdown Column with an Image -->
@@ -109,9 +109,14 @@
                         </div>
                       </div>
                     </li>
+
+                    <!-- Mobile item -->
+                    <li class="nav-item nav-item-show">
+                        <a class="nav-link" href="accounts.html">Accounts <span class="arrow">&gt;</span></a>
+                      </li>
     
                     <!-- Dropdown Menu -->
-                    <li class="nav-item">
+                    <li class="nav-item nav-item-hide">
                         <a class="nav-link" href="industries.html">Industries <span class="arrow">&gt;</span></a>
                         <div class="full-width-dropdown" style="text-wrap: wrap">
                             <!-- First Dropdown Column with an Image -->
@@ -164,8 +169,13 @@
                                 </div>
                         </div>
                       </li>
+
+                    <!-- Mobile item -->
+                    <li class="nav-item nav-item-show">
+                        <a class="nav-link" href="industries.html">Industries <span class="arrow">&gt;</span></a>
+                      </li>
     
-                    <li class="nav-item">
+                    <li class="nav-item nav-item-hide">
                         <a class="nav-link" href="partnerships.html">Partnerships <span class="arrow">&gt;</span></a>
                         <div class="full-width-dropdown">
                             <!-- First Dropdown Column with an Image -->
@@ -206,9 +216,14 @@
                                 </div>
                         </div>
                     </li>
+
+                    <!-- Mobile item -->
+                    <li class="nav-item nav-item-show">
+                        <a class="nav-link" href="partnerships.html">Partnerships <span class="arrow">&gt;</span></a>
+                      </li>
     
                       <!-- Dropdown Menu -->
-                    <li class="nav-item">
+                    <li class="nav-item nav-item-hide">
                         <a class="nav-link" href="faqs.html">FAQs <span class="arrow">&gt;</span></a>
                         <div class="full-width-dropdown">
                             <!-- First Dropdown Column with an Image -->
@@ -250,6 +265,16 @@
                         </div>
                       </li>
                   </ul>
+
+                  <!-- Mobile item -->
+                  <li class="nav-item nav-item-show">
+                    <a class="nav-link" href="faqs.html">FAQS - New Clients <span class="arrow">&gt;</span></a>
+                  </li>
+
+                  <!-- Mobile item -->
+                  <li class="nav-item nav-item-show">
+                    <a class="nav-link" href="faqs-existing.html">FAQS - Existing Clients <span class="arrow">&gt;</span></a>
+                  </li>
     
                   <div class="d-flex justify-content-end align-items-center mt-4 ms-auto"></div>
                     <div>
@@ -287,10 +312,10 @@
                                 <img src="images/ProntoPay Logo.png" style="width: 15%;"/>
                             </a>
                             <div class="landing-main">
-                                <h1 class="display-1" style="margin-top: 2%;">Payments Beyond Borders</h1>
+                                <h1 class="display-1">Payments Beyond Borders</h1>
                                 <div class="landing-buttons d-flex justify-content-center align-items-center">
                                     <div class="m-2 p-1">
-                                        <a class="pp-link" href="">
+                                        <a class="pp-link" id="login-button" href="#">
                                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 200px;">
                                                 <p class="m-0">Login</p>
                                             </div>
@@ -306,7 +331,7 @@
                                 </div>
                             </div>
                             <div class="landing-login">
-                                <h1 class="display-1" style="margin-top: 2%;">Please choose your login server below</h1>
+                                <h1 class="display-1" style="height: 96px; font-size: 4rem;">Please choose your login server below</h1>
                                 <div class="landing-buttons d-flex justify-content-center align-items-center">
                                     <div class="m-2 p-1">
                                         <a class="pp-link" href="https://prontopay.equalsconnect.com/account/login">
@@ -1398,5 +1423,27 @@
         <!-- Custom Scripts -->
         <script src="animation.js"></script>
 
+
+        <script>
+// Select the elements
+const landingMain = document.querySelector('.landing-main');
+const landingLogin = document.querySelector('.landing-login');
+const loginButton = document.querySelector('#login-button');
+
+// Add click event listener to the login button
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default link behavior
+
+    // Hide the main section
+    landingMain.style.display = 'none';
+
+    // Show the login section with fade-in
+    landingLogin.style.display = 'block';
+    setTimeout(() => {
+        landingLogin.classList.add('visible'); // Apply fade-in after it's displayed
+    }, 0);
+});
+
+        </script>
     </body>
 </html>

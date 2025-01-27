@@ -564,6 +564,20 @@ a.pp-text-blue:active {
     padding: 0 !important;
 }
 
+.nav-item-show {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .nav-item-hide {
+        display: none;
+    }
+
+    .nav-item-show {
+        display: block;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .grid-container {
@@ -740,39 +754,27 @@ a.pp-text-blue:active {
     border: none; /* Remove default border */
 }
 
+/* Basic visibility styles */
 .landing-main,
 .landing-login {
-    position: absolute; /* Stack both elements */
-    top: 50%; /* Vertically center */
-    left: 50%; /* Horizontally center */
-    transform: translate(-50%, -50%); /* Center transform */
-    width: 100%; /* Ensure full width */
-    text-align: center;
-    opacity: 1; /* Default visibility */
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Smooth animation */
+    transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
 }
 
-/* Landing login is initially hidden below */
+/* Initially hidden login section */
 .landing-login {
     opacity: 0;
-    transform: translate(-50%, 100%); /* Start off-screen */
+    display: none; /* Hidden by default */
 }
 
-/* When show-login class is added */
-.show-login .landing-main {
-    opacity: 0; /* Fade out */
-    transform: translate(-50%, -100%); /* Slide up and out of view */
-}
-
-.show-login .landing-login {
-    opacity: 1; /* Fade in */
-    transform: translate(-50%, -50%); /* Move into the centered position */
+/* When visible, show the element */
+.visible {
+    opacity: 1;
+    display: block; /* Ensure it's visible */
 }
 
 .partner-image-container {
     position: relative;
     width: 90vw;
-    height: 90vw;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

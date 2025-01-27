@@ -164,8 +164,3 @@ function expandInfo(card) {
         arrow.classList.remove('d-none'); // Show the arrow
     }
 }
-
-// -------------------------------------------------
-
-// Select all blue banners within the structure
-
