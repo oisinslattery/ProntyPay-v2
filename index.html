@@ -302,7 +302,7 @@
                     <div class="card text-center text-white" style="height: 100%; position: relative;">
                         <video src="videos/f19309fd-5951-4509-b23b-1d979ca841f8.MP4"
                             class="card-img"
-                            autoplay
+                            autoplay="autoplay"
                             loop
                             muted
                             style="opacity: 0.5; height: 100%; width: 100%; object-fit: cover;">
@@ -311,7 +311,7 @@
                             <a class="pp-link mb-4" href="#">
                                 <img src="images/ProntoPay Logo.png" style="width: 15%;"/>
                             </a>
-                            <div class="landing-main">
+                            <div class="landing-main desktop">
                                 <h1 class="display-1">Payments Beyond Borders</h1>
                                 <div class="landing-buttons d-flex justify-content-center align-items-center">
                                     <div class="m-2 p-1">
@@ -330,8 +330,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="landing-login">
-                                <h1 class="display-1" style="height: 96px; font-size: 4rem;">Please choose your login server below</h1>
+                            <div class="landing-login desktop" style="display: none;">
+                                <h1 class="display-1" style="margin-top: 2%; font-size: 4rem;">Please choose your login server below</h1>
                                 <div class="landing-buttons d-flex justify-content-center align-items-center">
                                     <div class="m-2 p-1">
                                         <a class="pp-link" href="https://prontopay.equalsconnect.com/account/login">
@@ -852,7 +852,7 @@
                     <div class="card text-center text-white" style="height: 100%; position: relative;">
                         <video src="videos/f19309fd-5951-4509-b23b-1d979ca841f8.MP4"
                             class="card-img"
-                            autoplay
+                            autoplay="autoplay"
                             loop
                             muted
                             style="opacity: 0.5; height: 100%; width: 100%; object-fit: cover;">
@@ -861,21 +861,42 @@
                             <a class="pp-link mb-4" href="#">
                                 <img src="images/ProntoPay Logo.png"/>
                             </a>
-                            <h1 class="display-1" style="margin-top: 2%;">Payments Beyond Borders</h1>
-                            <div class="landing-buttons d-flex justify-content-center align-items-center">
-                                <div class="my-2" style="width: 200px; height: 120px">
-                                    <a class="pp-link" href="">
-                                        <div class="pp-button d-flex flex-column justify-content-center align-items-center" style="width: 200px;">
-                                            <p class="m-0">Login</p>
-                                        </div>
-                                    </a>
+                            <div class="landing-main mobile-land">
+                                <h1 class="display-1" style="margin-bottom: 20px; ">Payments Beyond Borders</h1>
+                                <div class="landing-buttons d-flex justify-content-center align-items-center">
+                                    <div class="m-2 p-1 d-flex justify-content-center align-items-center">
+                                        <a class="pp-link" id="login-button-mobile" href="#">
+                                            <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 200px;">
+                                                <p class="m-0">Login</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="m-2 p-1 d-flex justify-content-center align-items-center">
+                                        <a class="pp-link" href="https://prontopay.equalsconnect.com/account/open">
+                                            <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 200px;">
+                                                <p class="m-0">Sign Up</p>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <a class="pp-link" href="https://prontopay.equalsconnect.com/account/open">
-                                        <div class="pp-button d-flex flex-column justify-content-center align-items-center" style="width: 200px;">
-                                            <p class="m-0">Sign Up</p>
-                                        </div>
-                                    </a>
+                            </div>
+                            <div class="landing-login mobile-land" style="display: none;">
+                                <h1 class="display-1" style="margin-bottom: 20px; ">Please choose your login server below</h1>
+                                <div class="landing-buttons d-flex justify-content-center align-items-center">
+                                    <div class="m-2 p-1 d-flex justify-content-center align-items-center">
+                                        <a class="pp-link" href="https://prontopay.equalsconnect.com/account/login">
+                                            <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 200px;">
+                                                <p class="m-0">Equals</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="m-2 p-1 d-flex justify-content-center align-items-center">
+                                        <a class="pp-link" href="https://prontopay.numito.com/login">
+                                            <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 200px;">
+                                                <p class="m-0">Numito</p>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <p class="lead mt-4">All funds held by FCA or CBE regulated institutions</p>
@@ -1425,25 +1446,54 @@
 
 
         <script>
-// Select the elements
-const landingMain = document.querySelector('.landing-main');
-const landingLogin = document.querySelector('.landing-login');
-const loginButton = document.querySelector('#login-button');
+// Desktop elements
+const landingMainDesktop = document.querySelector('.landing-main.desktop');
+const landingLoginDesktop = document.querySelector('.landing-login.desktop');
+const loginButtonDesktop = document.querySelector('#login-button'); // Desktop button
 
-// Add click event listener to the login button
-loginButton.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent default link behavior
+// Mobile elements
+const landingMainMobile = document.querySelector('.landing-main.mobile-land');
+const landingLoginMobile = document.querySelector('.landing-login.mobile-land');
+const loginButtonMobile = document.querySelector('#login-button-mobile'); // Mobile button
 
-    // Hide the main section
-    landingMain.style.display = 'none';
+// Debugging: Log elements to confirm selection
+console.log('Mobile Main (mobile-land):', landingMainMobile);
+console.log('Mobile Login (mobile-land):', landingLoginMobile);
+console.log('Mobile Button (mobile-land):', loginButtonMobile);
 
-    // Show the login section with fade-in
-    landingLogin.style.display = 'block';
-    setTimeout(() => {
-        landingLogin.classList.add('visible'); // Apply fade-in after it's displayed
-    }, 0);
-});
+// Function to toggle visibility
+function toggleVisibility(mainElement, loginElement) {
+    if (mainElement && loginElement) {
+        console.log('Toggling visibility (mobile-land):', mainElement, loginElement);
 
+        // Hide the main section
+        mainElement.style.display = 'none';
+
+        // Show the login section
+        loginElement.style.display = 'block';
+        setTimeout(() => {
+            loginElement.classList.add('visible'); // Add fade-in if necessary
+        }, 0);
+    } else {
+        console.error('Main or login element not found for mobile-land.');
+    }
+}
+
+// Add event listener for mobile button
+if (loginButtonMobile) {
+    loginButtonMobile.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleVisibility(landingMainMobile, landingLoginMobile);
+    });
+}
+
+// Attach event listeners for desktop
+if (loginButtonDesktop) {
+    loginButtonDesktop.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleVisibility(landingMainDesktop, landingLoginDesktop);
+    });
+}
         </script>
     </body>
 </html>

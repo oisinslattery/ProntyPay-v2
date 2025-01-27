@@ -760,11 +760,37 @@ a.pp-text-blue:active {
     transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
 }
 
+.landing-main.mobile {
+    display: block; /* Ensure mobile main is visible initially */
+}
+
 /* Initially hidden login section */
 .landing-login {
     opacity: 0;
     display: none; /* Hidden by default */
 }
+
+
+/* Ensure mobile main-land is visible initially */
+.landing-main.mobile-land {
+    display: block;
+}
+
+/* Ensure mobile login-land is hidden initially */
+.landing-login.mobile-land {
+    display: none;
+}
+
+/* Center buttons for mobile-land */
+.landing-main.mobile-land .landing-buttons,
+.landing-login.mobile-land .landing-buttons {
+    text-align: center; /* Center text inside buttons */
+    margin: 0 auto; /* Center the button container */
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* When visible, show the element */
 .visible {
@@ -775,6 +801,7 @@ a.pp-text-blue:active {
 .partner-image-container {
     position: relative;
     width: 90vw;
+    height: 100vw;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
