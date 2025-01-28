@@ -161,15 +161,17 @@ a.pp-text-blue:active {
     width: 100%;
     padding: 0;
     height: auto; /* Ensure the navbar height is auto by default */
-    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transition for opacity and height */
+    transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 1; /* Default opacity */
+    transform:translateY(0);
 }
 
 /* Navbar hidden state */
 .navbar.hidden {
     height: 0; /* Set height to 0 when hidden */
     padding: 0; /* Remove padding to avoid extra space */
-    opacity: 0; /* Set opacity to 0 when hidden */
+    transform: translateY(-100%); /* Move navbar off the screen */
+    opacity: 0; /* Optional: fade out */
 }
 
 /* Ensure navbar links and text are white */
@@ -304,30 +306,14 @@ a.pp-text-blue:active {
 
 .no-glow-partner {
     position: relative;
-    background: none; /* No glow effect initially */
-    color: transparent; /* Text is transparent initially */
-    text-align: center; /* Center the text */
-    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: none; /* No glow initially */
-    color: rgb(136, 203, 236);
+    color: rgb(136, 203, 236); /* Text color */
+    transition: text-shadow 0.3s ease; /* Smooth transition for the glow effect */
 }
 
 .no-glow-partner:hover {
-    border: solid rgb(136, 203, 236);
-    color: white;
-    min-width: 100px;
-    margin: 8px;
-    padding: 4px;
-    color: white; /* White text when hovered */
-    padding: 0 10px;
-    background-color: rgb(136, 203, 236);
-    min-width: 100px;
-    box-shadow: 
-        0 0 20px rgba(136, 203, 236, 0.6),  /* Strong inner glow */
-        0 0 40px rgba(136, 203, 236, 0.4),  /* Mid glow layer */
-        0 0 80px rgba(136, 203, 236, 0.2),  /* Outer glow */
-        0 0 120px rgba(136, 203, 236, 0.1); /* Faintest, farthest glow */
+    text-shadow: 0 0 10px rgb(136, 203, 236), 0 0 20px rgb(136, 203, 236), 0 0 30px rgb(136, 203, 236);
 }
+
 
 .dropdown-item:hover {
     box-shadow: 0 0 30px rgba(136, 203, 236, 1), /* Stronger glow */
@@ -804,7 +790,7 @@ a.pp-text-blue:active {
 .partner-image-container {
     position: relative;
     width: 90vw;
-    height: 100vw;
+    height: 500px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -831,6 +817,7 @@ a.pp-text-blue:active {
     transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
     height: 50px; /* Original height */
     overflow: hidden;
+    align-content: center;    
 }
 
 .partner-blue-banner h3 {
@@ -845,7 +832,13 @@ a.pp-text-blue:active {
     line-height: 1.5;
     margin: 10px 0;
     transition: opacity 0.3s ease-in-out;
-    display: block; /* Ensure it is not 'none' */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center; /* Ensure text within is centered */
+    margin-left: auto; /* Horizontally center the block */
+    margin-right: auto; /* Horizontally center the block */
 }
 
 .partner-blue-banner.expanded {

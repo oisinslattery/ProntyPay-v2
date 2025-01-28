@@ -9,45 +9,42 @@ document.addEventListener('scroll', function() {
 
 // --------------------------------------------
 
-let lastScrollTop = 0;
-const scrollContainer = document.querySelector('.scroll-container');
-const navbar = document.querySelector('.navbar');
+let lastScrollY = 0; // Track the last known scroll position
+const navbar = document.querySelector('.navbar'); // Replace with your navbar selector
+const scrollContainers = document.querySelectorAll('.scroll-container, .desktop-container'); // Select both containers
 
-scrollContainer.addEventListener('scroll', () => {
-let currentScrollTop = scrollContainer.scrollTop;
-let maxScrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+scrollContainers.forEach(scrollContainer => {
+    if (scrollContainer) {
 
-// Set a small threshold to ignore small scrolls (bounce effect)
-const threshold = 250;
+        scrollContainer.addEventListener('scroll', () => {
+            let currentScrollY = scrollContainer.scrollTop; // Get the current scroll position
 
-// Prevent overscrolling at the top
-if (currentScrollTop <= threshold) {
-scrollContainer.scrollTop = 0; // Force it to stay at the top
-navbar.classList.remove('hidden'); // Ensure the navbar is visible
-lastScrollTop = 0; // Reset scroll tracking
-return;
-}
+            // Treat anything ≤ 20 as "at the top"
+            if (currentScrollY <= 20) {
+                currentScrollY = 0; // Normalize to 0
+            }
 
-// Prevent overscrolling at the bottom
-if (currentScrollTop >= maxScrollTop) {
-scrollContainer.scrollTop = maxScrollTop;
-}
+            // Force navbar visible at the top
+            if (currentScrollY === 0) {
+                navbar.classList.remove('hidden'); // Show navbar
+                lastScrollY = 0; // Reset lastScrollY to avoid false detections
+                return; // Exit early
+            }
 
-// Handle navbar visibility based on scroll direction
-if (currentScrollTop > lastScrollTop) {
-// Scrolling down
-if (!navbar.classList.contains('hidden')) {
-navbar.classList.add('hidden'); // Hide the navbar
-}
-} else if (currentScrollTop < lastScrollTop) {
-// Scrolling up
-if (navbar.classList.contains('hidden')) {
-navbar.classList.remove('hidden'); // Show the navbar
-}
-}
+            // Handle scrolling down
+            if (currentScrollY > lastScrollY) {
+                navbar.classList.add('hidden'); // Hide navbar
+            } 
+            // Handle scrolling up
+            else if (currentScrollY < lastScrollY) {
+                navbar.classList.remove('hidden'); // Show navbar
+            }
 
-lastScrollTop = currentScrollTop;
-console.log(currentScrollTop, lastScrollTop)
+            lastScrollY = currentScrollY; // Update the last scroll position
+        });
+    } else {
+        console.error('Scroll container not found! Please check your selector.');
+    }
 });
 
 // --------------------------------------------
