@@ -11,6 +11,7 @@ body {
     overflow-y: hidden; /* Prevent default vertical scrolling */
     background-color: black !important;
     color: white !important;
+    overflow-x: hidden;
 }
 
 .mobile {
@@ -548,9 +549,11 @@ a.pp-text-blue:active {
 
 .mobile-container {
     display: none;
-    overflow: auto;  /* Allows scrolling */
+    overflow-y: auto;  /* Allows scrolling */
+    overflow-x: hidden;
     height: 100vh;   /* Ensure the container height is sufficient */
     /* Other styles as necessary */
+    max-width: 100%;
 }
 
 .mobile-section {
