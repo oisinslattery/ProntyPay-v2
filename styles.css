@@ -234,6 +234,14 @@ a.pp-text-blue:active {
     transition: box-shadow 0.3s ease; /* Smooth transition */
 }
 
+.dropdown-item-blank {
+    display: flex;
+    align-items: center;
+    height: 33%;
+    padding: 10px !important; /* Adjust padding as needed */
+    text-decoration: none;
+}
+
 
 /* Show dropdown on hover of the nav-item or dropdown itself */
 .nav-item:hover .full-width-dropdown,
@@ -835,6 +843,7 @@ a.pp-text-blue:active {
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 5;
+    display: block !important;
 }
 
 .partner-blue-banner .info {
