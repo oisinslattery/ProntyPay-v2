@@ -844,6 +844,7 @@ a.pp-text-blue:active {
     opacity: 1 !important;
     z-index: 5;
     display: block !important;
+    overflow: visible !important;
 }
 
 .partner-blue-banner .info {
