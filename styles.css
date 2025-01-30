@@ -843,7 +843,7 @@ a.pp-text-blue:active {
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 5;
-    position:  !important;
+    position:  relative !important;
 }
 
 .partner-blue-banner .info {
