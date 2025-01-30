@@ -847,6 +847,7 @@ a.pp-text-blue:active {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     will-change: transform;
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
 }
 
 .partner-blue-banner .info {
