@@ -161,3 +161,5 @@ function expandInfo(card) {
         arrow.classList.remove('d-none'); // Show the arrow
     }
 }
+
+// ------------------------------------------
