@@ -286,14 +286,14 @@
     
                   <div class="d-flex justify-content-end align-items-center mt-4 ms-auto"></div>
                     <div>
-                        <a class="pp-link m-0" href="">
+                        <a id="login-button-nav" class="pp-link m-0" href="#">
                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
                                 <p class="m-0" style="font-size: 0.8rem;">Login</p>
                             </div>
                         </a>
                     </div>
                     <div>
-                        <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                        <a id="signup-button-nav" class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
                                 <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
                             </div>
@@ -303,7 +303,6 @@
                 </div>
             </div>
           </nav>
-           
         <main>
             <div class="scroll-container">
                 <div class="container-fluid snap-section accounts px-5 acc-ind-layout" style="align-items: flex-start; height: 90vh;">
@@ -346,7 +345,7 @@
                         </div>
                         <div class="col col-md-4 d-flex flex-column justify-content-center p-3 text-column" style="width: 40%;">
                             <h5 class="display-6 mb-5 pp-text-blue">Mortgages</h5>
-                            <p>Looking to purchase a property in the UAE market? ProntoPay are connecting to the top mortgage brokers in the country. We compare the entire market from over 20 lenders and 500 mortgage options to find you the perfect deal based on your circumstances.</p>
+                            <p>Looking to purchase a property in the UAE market? ProntoPay are connected to the top mortgage brokers in the country. We compare the entire market from over 20 lenders and 500 mortgage options to find you the perfect deal based on your circumstances.</p>
                             <a class="pp-link mt-3" href="https://prontopay.useholo.com/en/mortgage-products-services">
                                 <div class="pp-button text-center" style="width: 150px;">Learn More</div>
                             </a>
@@ -458,7 +457,7 @@
                 <div class="mobile-section" style="height: 10vh;">
                 </div>
                 
-                <div id="industries-rec" class="mobile-section px-3">
+                <div id="industries-rec-mobile" class="mobile-section px-3">
 
                         <div class="col col-md-4 justify-content-center text-column">
                             <h5 class="display-6 mb-5 pp-text-blue">Real Estate Companies</h5>
@@ -473,8 +472,24 @@
                 
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
+
+                <div id="industries-mortgage-mobile" class="mobile-section px-3">
+
+                    <div class="col col-md-4 justify-content-center text-column">
+                        <h5 class="display-6 mb-5 pp-text-blue">Mortgages</h5>
+                        <img src="images/mortgages_extended_blurred.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <p class="lead mt-3">Looking to purchase a property in the UAE market? ProntoPay are connected to the top mortgage brokers in the country. We compare the entire market from over 20 lenders and 500 mortgage options to find you the perfect deal based on your circumstances.</p>
+                        <a class="pp-link mt-3" href="https://prontopay.useholo.com/en/mortgage-products-services">
+                            <div class="pp-button text-center" style="width: 150px;">Learn More</div>
+                        </a>
+                    </div>
+
+                </div>
+            
+                <div class="mobile-section" style="height: 30vh;">
+                </div>
                 
-                <div id="industries-corp" class="mobile-section px-3">
+                <div id="industries-corp-mobile" class="mobile-section px-3">
 
                         <div class="col col-md-4 justify-content-center text-column">
                             <h5 class="display-6 mb-5 pp-text-blue">Corporates</h5>
@@ -486,11 +501,12 @@
                         </div>
 
                 </div>
+
                 
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
 
-                <div id="industries-family" class="mobile-section px-3">
+                <div id="industries-family-mobile" class="mobile-section px-3">
 
                         <div class="col col-md-4justify-content-center text-column">
                             <h5 class="display-6 mb-5 pp-text-blue">Family Offices</h5>
@@ -506,7 +522,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
                 
-                <div id="industries-personal" class="mobile-section px-3">
+                <div id="industries-personal-mobile" class="mobile-section px-3">
 
                         <div class="col col-md-4 justify-content-center text-column">
                             <h5 class="display-6 mb-5 pp-text-blue">Personal Accounts</h5>
@@ -561,6 +577,42 @@
         <script src="animation.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginButton = document.querySelector("#login-button-nav");
+                const signupButton = document.querySelector("#signup-button-nav");
+            
+                if (loginButton) {
+                    loginButton.addEventListener("click", function (event) {
+                        if (loginButton.href === "https://prontopay.equalsconnect.com/account/login") {
+                            return;
+                        }
+                        
+                        event.preventDefault();
+            
+                        const loginText = loginButton.querySelector("p");
+                        const signupText = signupButton.querySelector("p");
+            
+                        // Add class to trigger transition
+                        loginButton.classList.add("changing");
+                        signupButton.classList.add("changing");
+            
+                        // Wait for transition to complete, then update text and links
+                        setTimeout(() => {
+                            if (loginText) loginText.textContent = "Equals";
+                            loginButton.href = "https://prontopay.equalsconnect.com/account/login";
+            
+                            if (signupText) signupText.textContent = "Numito";
+                            signupButton.href = "https://prontopay.numito.com/login";
+            
+                            // Remove class to fade text back in
+                            loginButton.classList.remove("changing");
+                            signupButton.classList.remove("changing");
+                        }, 300); // Matches the CSS transition duration
+                    });
+                }
+            });
+            
+                        </script>
     </body>
 </html>

@@ -286,14 +286,14 @@
     
                   <div class="d-flex justify-content-end align-items-center mt-4 ms-auto"></div>
                     <div>
-                        <a class="pp-link m-0" href="">
+                        <a id="login-button-nav" class="pp-link m-0" href="#">
                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
                                 <p class="m-0" style="font-size: 0.8rem;">Login</p>
                             </div>
                         </a>
                     </div>
                     <div>
-                        <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                        <a id="signup-button-nav" class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
                                 <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
                             </div>
@@ -491,27 +491,27 @@
                                 <p class="display-6 mx-3">Access an account to transact between over 150 countries</p>
                             </div>
                             <div class="grid-container">
-                                <a href="#account-multi" class="grid-item no-glow">
+                                <a href="#account-multi-mobile" class="grid-item no-glow">
                                     <img src="images/flags/multi-currency flag.png">
                                     <h3>Multi-Currency</h3>
                                 </a>
-                                <a href="#account-europe" class="grid-item no-glow">
+                                <a href="#account-europe-mobile" class="grid-item no-glow">
                                     <img src="images/flags/europe outline trans.png">
                                     <h3>Europe</h3>
                                 </a>
-                                <a href="#account-switzerland" class="grid-item no-glow">
+                                <a href="#account-switzerland-mobile" class="grid-item no-glow">
                                     <img src="images/flags/swiss outline.png">
                                     <h3>Switzerland</h3>
                                 </a>
-                                <a href="#account-uae" class="grid-item no-glow">
+                                <a href="#account-uae-mobile" class="grid-item no-glow">
                                     <img src="images/flags/uae outline.png">
                                     <h3>United Arab Emirates</h3>
                                 </a>
-                                <a href="#account-uk" class="grid-item no-glow">
+                                <a href="#account-uk-mobile" class="grid-item no-glow">
                                     <img src="images/flags/uk outline.png">
                                     <h3>United Kingdom</h3>
                                 </a>
-                                <a href="#account-usa" class="grid-item no-glow">
+                                <a href="#account-usa-mobile" class="grid-item no-glow">
                                     <img src="images/flags/us outline.png">
                                     <h3>United States</h3>
                                 </a>
@@ -523,7 +523,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
     
-                <div id="account-multi" class="mobile-section px-3">
+                <div id="account-multi-mobile" class="mobile-section px-3">
                         <div class="col col-md-4 justify-content-center text-column">
                             <h5 class="display-6 mb-5 pp-text-blue">Multi-currency Account</h5>
                             <img src="images/multi-currency.webp" style="width: 100%; height: 100%; object-fit: cover; align-self: center;">
@@ -537,7 +537,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
                 
-                <div id="account-europe" class="mobile-section px-3">
+                <div id="account-europe-mobile" class="mobile-section px-3">
                     <div class="col col-md-4justify-content-center text-column">
                         <h5 class="display-6 mb-5 pp-text-blue">Europe</h5>
                         <img src="./images/europe-32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
@@ -551,7 +551,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
                 
-                <div id="account-switzerland" class="mobile-section px-3">
+                <div id="account-switzerland-mobile" class="mobile-section px-3">
                     <div class="col col-md-4 justify-content-center text-column">
                         <h5 class="display-6 mb-5 pp-text-blue">Switzerland</h5>
                         <img src="./images/switzerland-account-32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
@@ -565,7 +565,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
                 
-                <div id="account-uae" class="mobile-section px-3">
+                <div id="account-uae-mobile" class="mobile-section px-3">
                     <div class="col col-md-4 justify-content-center text-column">
                         <h5 class="display-6 mb-5 pp-text-blue">United Arab Emirates</h5>
                         <img src="./images/uae-account.jpg" style="width: 100%; height: 100%; object-fit: cover;">
@@ -579,7 +579,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
                 
-                <div id="account-uk" class="mobile-section px-3">
+                <div id="account-uk-mobile" class="mobile-section px-3">
                     <div class="col col-md-4 justify-content-center text-column">
                         <h5 class="display-6 mb-5 pp-text-blue">United Kingdom</h5>
                         <img src="./images/uk-account-32.png" style="width: 100%; height: 100%; object-fit: cover;">
@@ -593,7 +593,7 @@
                 <div class="mobile-section" style="height: 30vh;">
                 </div>
                 
-                <div id="account-usa" class="mobile-section px-3">
+                <div id="account-usa-mobile" class="mobile-section px-3">
                     <div class="col col-md-4 justify-content-center text-column">
                         <h5 class="display-6 mb-5 pp-text-blue">United States of America</h5>
                         <img src="./images/usa-account-32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
@@ -646,5 +646,41 @@
         <script src="animation.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginButton = document.querySelector("#login-button-nav");
+                const signupButton = document.querySelector("#signup-button-nav");
+            
+                if (loginButton) {
+                    loginButton.addEventListener("click", function (event) {
+                        if (loginButton.href === "https://prontopay.equalsconnect.com/account/login") {
+                            return;
+                        }
+                        
+                        event.preventDefault();
+            
+                        const loginText = loginButton.querySelector("p");
+                        const signupText = signupButton.querySelector("p");
+            
+                        // Add class to trigger transition
+                        loginButton.classList.add("changing");
+                        signupButton.classList.add("changing");
+            
+                        // Wait for transition to complete, then update text and links
+                        setTimeout(() => {
+                            if (loginText) loginText.textContent = "Equals";
+                            loginButton.href = "https://prontopay.equalsconnect.com/account/login";
+            
+                            if (signupText) signupText.textContent = "Numito";
+                            signupButton.href = "https://prontopay.numito.com/login";
+            
+                            // Remove class to fade text back in
+                            loginButton.classList.remove("changing");
+                            signupButton.classList.remove("changing");
+                        }, 300); // Matches the CSS transition duration
+                    });
+                }
+            });
+</script>
     </body>
 </html>

@@ -854,5 +854,12 @@ a.pp-text-blue:active {
     opacity: 1;
 }
 
+#login-button-nav p, #signup-button-nav p {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#login-button-nav.changing p, #signup-button-nav.changing p {
+    opacity: 0;
+}
 
 

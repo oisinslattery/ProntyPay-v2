@@ -292,14 +292,14 @@
     
                   <div class="d-flex justify-content-end align-items-center mt-4 ms-auto"></div>
                     <div>
-                        <a class="pp-link m-0" href="">
+                        <a id="login-button-nav" class="pp-link m-0" href="#">
                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
                                 <p class="m-0" style="font-size: 0.8rem;">Login</p>
                             </div>
                         </a>
                     </div>
                     <div>
-                        <a class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
+                        <a id="signup-button-nav" class="pp-link m-0" href="https://prontopay.equalsconnect.com/account/open">
                             <div class="pp-button d-flex flex-column justify-content-center align-items-center m-2 p-1" style="width: 150px;">
                                 <p class="m-0" style="font-size: 0.8rem;">Sign Up</p>
                             </div>
@@ -588,6 +588,42 @@
         <script src="animation.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginButton = document.querySelector("#login-button-nav");
+                const signupButton = document.querySelector("#signup-button-nav");
+            
+                if (loginButton) {
+                    loginButton.addEventListener("click", function (event) {
+                        if (loginButton.href === "https://prontopay.equalsconnect.com/account/login") {
+                            return;
+                        }
+                        
+                        event.preventDefault();
+            
+                        const loginText = loginButton.querySelector("p");
+                        const signupText = signupButton.querySelector("p");
+            
+                        // Add class to trigger transition
+                        loginButton.classList.add("changing");
+                        signupButton.classList.add("changing");
+            
+                        // Wait for transition to complete, then update text and links
+                        setTimeout(() => {
+                            if (loginText) loginText.textContent = "Equals";
+                            loginButton.href = "https://prontopay.equalsconnect.com/account/login";
+            
+                            if (signupText) signupText.textContent = "Numito";
+                            signupButton.href = "https://prontopay.numito.com/login";
+            
+                            // Remove class to fade text back in
+                            loginButton.classList.remove("changing");
+                            signupButton.classList.remove("changing");
+                        }, 300); // Matches the CSS transition duration
+                    });
+                }
+            });
+            
+                        </script>
     </body>
 </html>

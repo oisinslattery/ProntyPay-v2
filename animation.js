@@ -163,3 +163,37 @@ function expandInfo(card) {
 }
 
 // ------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const loginButton = document.querySelector("#login-button-nav");
+    const signupButton = document.querySelector("#signup-button-nav");
+
+    if (loginButton) {
+        loginButton.addEventListener("click", function (event) {
+            if (loginButton.href === "https://prontopay.equalsconnect.com/account/login") {
+                return;
+            }
+            
+            event.preventDefault();
+
+            const loginText = loginButton.querySelector("p");
+            const signupText = signupButton.querySelector("p");
+
+            // Add class to trigger transition
+            loginButton.classList.add("changing");
+            signupButton.classList.add("changing");
+
+            // Wait for transition to complete, then update text and links
+            setTimeout(() => {
+                if (loginText) loginText.textContent = "Equals";
+                loginButton.href = "https://prontopay.equalsconnect.com/account/login";
+
+                if (signupText) signupText.textContent = "Numito";
+                signupButton.href = "https://prontopay.numito.com/login";
+
+                // Remove class to fade text back in
+                loginButton.classList.remove("changing");
+                signupButton.classList.remove("changing");
+            }, 300); // Matches the CSS transition duration
+        });
+    }
+});
